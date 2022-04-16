@@ -1,0 +1,603 @@
+.swiper--wrapper {
+  /* wrapperのサイズを調整 */
+  width: 100%;
+  /* height: 300px; */
+}
+
+.swiper-slide {
+  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* line-height: 300px; */
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 0 0 10px !important;
+  background: #333 !important;
+}
+
+.swiper-button-prev {
+  background: url(https://haniwaman.com/cms/wp-content/uploads/2018/05/swiper3.png) no-repeat center center / contain;
+}
+
+.swiper-button-next {
+  background: url(https://haniwaman.com/cms/wp-content/uploads/2018/05/swiper3.png) no-repeat center center / contain;
+  transform: scale(-1, 1);
+}
+
+
+.swiper-pagination-bullet {
+  line-height: calc(100vh/6);
+  background: #000 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FFB7C4 !important;
+}
+
+.box10 {
+  padding: 0px 0px;
+  margin: 2px 2px;
+  color: #111111;
+  background: #ffffff;
+  /*背景色*/
+  /* border-top: solid 6px #2c94a1; */
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  /*影*/
+  color: #424242;
+
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.box10 p {
+  color: #111111;
+  margin: 0;
+  padding: 0;
+}
+
+.bg_patt_modal {
+  background-image: url(../img/bg_patt_modal.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.box26 {
+  user-select: none;
+  position: relative;
+  margin: 2em 0;
+  padding: 1em 1em;
+  border: solid 3px #3d4449;
+  border-radius: 8px;
+}
+
+.box26 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 9px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #fff;
+  color: #3d4449;
+  font-weight: bold;
+}
+
+.box26 p {
+  margin: 0;
+  padding: 0;
+}
+
+.box26 div {
+  margin-top: 0.6em;
+}
+
+/* パソコン用 */
+.pc {
+  /* display: block !important; */
+}
+
+.sp {
+  display: none !important;
+}
+
+.pc_vi {
+  visibility: visible !important;
+}
+
+.sp_vi {
+  visibility: hidden !important;
+}
+
+/** スマートフォン用 **/
+@media only screen and (max-width: 740px) {
+  .pc {
+    display: none !important;
+  }
+
+  .pc_vi {
+    visibility: hidden !important;
+  }
+
+  .sp {
+    display: block !important;
+  }
+
+  .sp_vi {
+    visibility: visible !important;
+  }
+
+  .flowArrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* test */
+.orderFlow figure {
+  position: relative;
+}
+
+.orderFlow figure::after {
+  background: url(../img/icon02.svg);
+  display: block;
+  content: " ";
+  background-size: 100% 100%;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 20;
+}
+
+.material-icons {
+  vertical-align: bottom;
+}
+
+#lame_usagi {
+  background: url(../img/icon_usa.png) no-repeat 100% 50%;
+  background-size: 80px 51px;
+  margin-right: 60px;
+}
+
+.divider {
+  background-color: #424242;
+}
+
+.numControl::after {
+  content: "-";
+}
+
+.simple_table,
+.simple_table td {
+  border: solid 1px #111111;
+}
+
+.simple_table:hover {
+  cursor: pointer;
+}
+
+/* mixi */
+.myMixiList {
+  margin: 0;
+  padding: 0.2em 1em;
+  text-align: left;
+}
+
+.mixi h5 {
+  text-align: left;
+  padding: 0.5em;
+}
+
+.bg_mesh {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.bg_mesh::after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(90deg,
+      rgba(100, 100, 100, 0.1) 50%,
+      transparent 10%),
+    linear-gradient(rgba(100, 100, 100, 0.2) 50%, transparent 10%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: 10px 10px;
+}
+
+.mixi_profile {
+  border-collapse: collapse;
+  border: solid 1px #f9f9f9;
+  /*表全体を線で囲う*/
+}
+
+.mixi_profile th,
+.mixi_profile td {
+  font-weight: normal;
+  border: dashed 1px #dcdcdc;
+  padding: 5px;
+}
+
+.mixi_profile th {
+  width: 6em;
+}
+
+.mixi_icon {
+  padding: 0;
+  height: 100px;
+  background-color: #999;
+}
+
+.mixi span {
+  margin-right: 2em;
+  color: #999;
+}
+
+.mixi_icon+p {
+  margin: 0;
+}
+
+.mixi,
+.mixi h5 {
+  font-family: "sans-serif";
+}
+
+.sns_cost_table,
+.sns_cost_table tr,
+.sns_cost_table td {
+  border: #333 solid 1px;
+  padding: 2px 10px;
+}
+
+.sns_cost_table th {
+  font-size: large;
+}
+
+/* ニューモーフィズム */
+.newButton {
+  padding: 1em 1em;
+  margin: 0 0.5em;
+  background: #fec0ca;
+  border: #333 solid 1px;
+  border-radius: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background: #ffb8c4;
+  box-shadow: 4px 4px 9px #78565c, -4px -4px 9px #ffd4e1;
+}
+
+.newButton:hover {
+  background: linear-gradient(145deg, #ffc5d2, #e6a6b0);
+  box-shadow: 4px 4px 9px #78565c, -4px -4px 9px #ffffff;
+}
+
+.newButton:active {
+  background: #ffb8c4;
+  box-shadow: inset 4px 4px 9px #78565c, inset -4px -4px 9px #ffffff;
+}
+
+.neu_menu {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 4em;
+  background-color: #ffb8c4;
+  user-select: none;
+  /* CSS3 */
+  -moz-user-select: none;
+  /* Firefox */
+  -webkit-user-select: none;
+  /* Safari、Chromeなど */
+  -ms-user-select: none;
+  /* IE10かららしい */
+}
+
+.neu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  /* width:20em; */
+
+  border-radius: 6px;
+  background: #ffb8c4;
+  box-shadow: 4px 4px 9px #78565c, -4px -4px 9px #ffd4e1;
+
+  color: #333;
+  text-align: center;
+  padding: 1px 10px;
+  vertical-align: middle;
+  margin: 0.3em 0.5em;
+
+  user-select: none;
+  /* CSS3 */
+  -moz-user-select: none;
+  /* Firefox */
+  -webkit-user-select: none;
+  /* Safari、Chromeなど */
+  -ms-user-select: none;
+  /* IE10かららしい */
+  vertical-align: middle;
+
+  border: solid 1px #333;
+  vertical-align: middle;
+}
+
+.neu:hover {
+  background: linear-gradient(145deg, #ffc5d2, #e6a6b0);
+  box-shadow: 4px 4px 9px #78565c, -4px -4px 9px #ffffff;
+  cursor: pointer;
+}
+
+.neu:active {
+  background: #ffb8c4;
+  box-shadow: inset 4px 4px 9px #78565c, inset -4px -4px 9px #ffffff;
+}
+
+.menu_active {
+  color: blue;
+  background-color: #fff;
+}
+
+/* ローディング */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.loading__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mixi_navi {
+  width: calc(100vw - 100px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* temp */
+.sample_items div,
+.sample_items h5 {
+  color: #000;
+  justify-content: left;
+  /* text-align: left; */
+}
+
+.sample_items .btn {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0.2em;
+  background-color: #424242;
+  height: 1.3em;
+  line-height: 10px;
+}
+
+/* テーブル */
+.osare-table {
+  width: 100%;
+  table-layout: fixed;
+  /* border:solid 2px #B53D44 !important; */
+  border-collapse: separate;
+  border-spacing: 0px 0px;
+  overflow: hidden;
+}
+
+.osare-table td:nth-child(1) {
+  background-color: #84cf00;
+  color: #fff;
+  font-size: 20px;
+}
+
+.osare-table td:nth-child(1)::first-letter {
+  font-size: 40px;
+  color: #fffdb8;
+}
+
+.osare-table tbody td {
+  border: #b53d44;
+  background-color: #fff9ff;
+  background-clip: padding-box;
+  border: solid 1px #b53d44;
+}
+
+/* ヘッダー */
+.osare-table thead th {
+  font-weight: bold;
+  background-color: #fda5be;
+  border: solid 1px #b53d44 !important;
+  font-size: min(5vw, 40px);
+}
+
+.osare-table thead th:nth-child(3):first-letter {
+  color: yellow;
+}
+
+.osare-table thead th:nth-child(4):first-letter {
+  color: #a8feff;
+}
+
+.osare-table thead th:nth-child(5):first-letter {
+  color: yellow;
+}
+
+.osare-table thead th:nth-child(6):first-letter {
+  color: #a8feff;
+}
+
+/* フッター（比較表と色つけたとき用） */
+.osare-table tfoot td {
+  border-radius: 0 0 10px 10px;
+}
+
+/* ボディ項目 */
+.osare-table tbody th {
+  background: #fff;
+  font-weight: bold;
+  border-bottom: solid 1px #b53d44 !important;
+  font-size: 4vw;
+}
+
+/* フッター項目 */
+.osare-table tfoot th {
+  background: none;
+  font-weight: bold;
+}
+
+/* ボディデータ */
+.osare-table tbody td {
+  text-align: center;
+  padding: 2px 1px;
+  white-space: nowrap;
+}
+
+.osare-table td:nth-child(n + 2):hover {
+  cursor: pointer;
+  /* background-color: red; */
+}
+
+/* ヘッダー行 */
+.osare-table thead th:first-child {
+  border-radius: 14px 0px 0px 0px;
+  background: linear-gradient(37deg, #84cf00 50%, #fc87a8 50%);
+  font-size: 11px;
+  width: 90px;
+  min-width: 40px;
+  max-width: 80px;
+  height: 10px;
+  min-height: 20px;
+  max-height: 80px;
+}
+
+.osare-table thead th:nth-child(n + 2) {
+  background: #fc87a8;
+  color: #fff;
+  padding: 0;
+}
+
+.osare-table thead th:last-child {
+  border-radius: 0px 14px 0px 0px;
+}
+
+/* 最終行のボーダーをなくす */
+.osare-table tbody tr:last-child th,
+.osare-table tbody tr:last-child td {
+  /* border-bottom: none !important; */
+}
+
+.price_top {
+  font-size: 1px;
+  line-height: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price_middle {
+  text-align: center;
+  font-size: min(4vw, 30px);
+}
+
+.price_middle::after {
+  content: "円";
+  font-size: 2vw;
+}
+
+.price_bottom {
+  background-color: #00aaff;
+  color: #fff !important;
+  border-radius: 10px;
+  padding: 0px 8px;
+  margin: 2px;
+}
+
+.table_side {
+  padding: 0px 0px;
+  height: 0px !important;
+  color: #fff;
+}
+
+.table_side div:nth-child(1) {
+  text-align: right;
+  padding-right: 4px;
+  color: #fff;
+  font-size: min(3vw, 16px);
+}
+
+.table_side div:nth-child(2) {
+  text-align: left;
+  padding-left: 4px;
+  vertical-align: bottom;
+  color: #fff;
+  font-size: min(3vw, 16px);
+}
+
+.comicomi {
+  display: flex;
+}
+
+.comicomi p {
+  font-size: min(3vw, 18px);
+  background-color: #fc87a8;
+  color: #FFF;
+  text-align: center;
+  padding: 3px 6px;
+  border-radius: 10px;
+  margin: 5px 10px 10px 0px;
+}
+
+.comicomi p::after {}
+
+.myChoice {
+  /* background-color: rgba(250, 100, 100, 0.8) !important; */
+  background: #00aaff !important;
+  color: #FFF !important;
+}
+
+.myChoice div {
+  color: #fff;
+}
+
+#toast {
+  /* visibility: hidden; */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+#toast a {
+  color: #fff;
+  font-size: 14px;
+  vertical-align: center;
+  letter-spacing: 0;
+}

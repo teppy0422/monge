@@ -1,0 +1,174 @@
+
+      
+      <div class="sample_items">
+        <style>
+          .neu_{
+            margin:1px;
+          }
+        </style>
+
+        
+
+          <script>
+            
+          </script>
+        </div>
+
+        <style>
+          #app h5{
+            background-color:lightgrey; 
+          }
+        </style>
+        <p>Vue.jsのテスト</p>
+        <div id="app">
+          {{number}}
+          <h5>v-on</h5>
+          <button v-on:click="countUp">カウントアップ</button>
+          <p>v-on:は@で省略可能</p>
+          
+          <h5>v-text</h5>
+          <div v-text="number"></div>
+
+          <h5>v-if</h5>
+          <div v-if="number">trueで表示</div>
+
+          <h5>v-for</h5>
+          <ul>
+            <li v-for="item in items">繰り返しで表示</li>
+          </ul>
+          <ul>
+            <li v-for="item in items">{{items}}</li>
+          </ul>
+          <ul>
+            <li v-for="item in items">{{item}}</li>
+          </ul>
+
+          <h5>v-bind</h5>
+          <p>html属性とvueデータの連動</p>
+          <p>タグ内部で{{}}は使えない<br>
+          v-bindは省略可能</p>
+          <div v-bind:class="color">カラー</div>
+
+          <h5>v-model</h5>
+          <input type="text" v-model="color">
+          {{custom_color}}
+
+        </div>
+        <script>
+          new Vue({
+            el:"#app",
+            data:{
+              number:0,
+              items:[1,2,3],
+              color:'blue',
+            },
+            methods:{
+              countUp:function(){
+                this.number = this.number + 1;
+              }
+            },
+            computed:{
+              custom_color:function(){
+                return this.color.toUpperCase();
+              }
+            }
+          })
+        </script>
+        <style>
+          .btn{
+            margin-bottom: 1em;
+          }
+        </style>
+        <br>
+        <div class="divider"></div>
+        <a class="btn" data-position="bottom" >ボタン</a>
+
+        <p>・ゆうかさんがSVGを描く。完了まではSVG文字</p>
+        <div class="row">
+          <h5 style="color:#111">ウェルカムボード</h5>
+          <div class="neu_menu">
+            <div class="neu" id="menu_01sp"><img src="./img/welcom_icon.svg" style="height:2.5em;"></div>
+            <div class="neu"><img src="./img/people.svg" style="height:3em;"></div>
+            <div class="neu"><img src="./img/welcom_letter.svg" style="height:2em;"></div>
+          </div>
+        </div>
+        <div class="row">
+          <h5 style="color:#111">似顔絵名刺</h5>
+          <div class="neu_menu" style="color:#333;">
+            <a class="tooltipped" data-position="bottom" data-tooltip="似顔絵名刺">
+              <div class="neu"><img src="./img/name_card.svg" style="height:2em;"></div>
+            </a>
+
+            <a class="tooltipped" data-position="bottom" data-tooltip="似顔絵名刺">
+              <div class="neu" ><i class="material-icons" style="font-size:2em;">account_box</i></div>
+            </a>
+            <div class="neu" style="color:#333;">名刺</div>
+          </div>
+          <p>抽象的なイメージにツールチップを追加したけどスマホでは出ない</p>
+        </div>
+        <div class="row">
+          <h5 style="color:#111">SNS</h5>
+          <div class="neu_menu" style="color:#333;">
+            <div class="neu" ><img src="./img/sns_letter.svg" style="height:3em"></div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+        <a class="btn" data-position="bottom" >フォント</a>
+        <p>-Noto Sans Japanease-</p>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+        </style>
+        <h3 style="font-family: 'Noto Sans JP', sans-serif;">もんげ絵mongee</h3>
+        <h4 style="font-family: 'Noto Sans JP', sans-serif;">もんげ絵mongee</h4>
+        <h5 style="font-family: 'Noto Sans JP', sans-serif;">もんげ絵mongee</h5>
+        <h6 style="font-family: 'Noto Sans JP', sans-serif;">もんげ絵mongee</h6>
+        <p style="font-family: 'Noto Sans JP', sans-serif;">もんげ絵mongee</p>
+
+        <p>-Kiwi Maru-</p>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+        </style>
+        <h3 style="font-family: 'Kiwi Maru', serif;">もんげ絵mongee</h3>
+        <h4 style="font-family: 'Kiwi Maru', serif;">もんげ絵mongee</h4>
+        <h5 style="font-family: 'Kiwi Maru', serif;">もんげ絵mongee</h5>
+        <h6 style="font-family: 'Kiwi Maru', serif;">もんげ絵mongee</h6>
+        <p style="font-family: 'Kiwi Maru', serif;">もんげ絵mongee</p>
+        
+
+        <p>-Klee One-</p>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+        </style>
+        <h3 style="font-family: 'Klee One', cursive;">もんげ絵mongee</h3>
+        <h4 style="font-family: 'Klee One', cursive;">もんげ絵mongee</h4>
+        <h5 style="font-family: 'Klee One', cursive;">もんげ絵mongee</h5>
+        <h6 style="font-family: 'Klee One', cursive;">もんげ絵mongee</h6>
+        <p style="font-family: 'Klee One', cursive;">もんげ絵mongee</p>
+
+        <p>-Yomogi-</p>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+        </style>
+        <h3 style="font-family: 'Yomogi', cursive;">もんげ絵mongee</h3>
+        <h4 style="font-family: 'Yomogi', cursive;">もんげ絵mongee</h4>
+        <h5 style="font-family: 'Yomogi', cursive;">もんげ絵mongee</h5>
+        <h6 style="font-family: 'Yomogi', cursive;">もんげ絵mongee</h6>
+        <p style="font-family: 'Yomogi', cursive;">もんげ絵mongee</p>
+        
+
+        <div class="divider"></div>
+        <a class="btn" data-position="bottom" >SNS</a>
+        <p>-Twitter-</p>
+        <div class="row">
+          <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/yuuka75?ref_src=twsrc%5Etfw">Tweets by yuuka75</a> 
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <p>-facebook-</p>
+        <iframe style="max-width:300px;" src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D2261343557280394%26set%3Da.109039559177482%26type%3D3&show_text=true&width=500" width="500" height="498" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+        <p>-instagram-</p>
+        <p>Facebookアカウントをプロにするとか色々と手順が必要</p>
+        <a href="https://arts-factory.net/insta_api/">手順</a>
+      </div>

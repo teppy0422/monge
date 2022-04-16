@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="73.851395mm"
+   height="59.090744mm"
+   viewBox="0 0 73.851394 59.090745"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
+   sodipodi:docname="sns_letter.svg">
+  <defs
+     id="defs2">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath850">
+      <path
+         id="path852"
+         style="fill:#ff0000;stroke:none;stroke-width:2.094"
+         d="m 120.02698,49.637326 h 37.29809 v 41.224215 h -37.29809 l -1.22938,-13.323175 1.08916,-4.764998 z"
+         sodipodi:nodetypes="ccccccc" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath908">
+      <rect
+         style="fill:#ff0000;stroke:none;stroke-width:2.06723"
+         id="rect910"
+         width="52.341709"
+         height="32.47757"
+         x="-79.268448"
+         y="44.39613" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.82311498"
+     inkscape:cx="99.641327"
+     inkscape:cy="257.92361"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1663"
+     inkscape:window-height="943"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="レイヤー 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(72.168464,-118.32952)">
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:28.8053px;line-height:1.25;font-family:'M PLUS 1';-inkscape-font-specification:'M PLUS 1, Heavy';stroke-width:0.675122"
+       x="-65.045044"
+       y="156.94734"
+       id="text1042"><tspan
+         sodipodi:role="line"
+         id="tspan1040"
+         x="-65.045044"
+         y="156.94734"
+         style="stroke-width:0.675122">SNS</tspan></text>
+  </g>
+</svg>
