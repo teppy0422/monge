@@ -601,3 +601,19 @@
   vertical-align: center;
   letter-spacing: 0;
 }
+
+/* スクロール */
+.area {
+  overflow: hidden;
+}
+
+.wrap {
+  display: flex;
+}
+
+.item {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
