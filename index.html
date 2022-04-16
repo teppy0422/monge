@@ -386,37 +386,45 @@
       </div>
     </div>
 
+
     <div id="Order flow" class="section valign-wrapper">
-      <div class="container">
+      <div class="row">
+
         <h3 class="center grey-text text-darken-3">ご注文の流れ</h3>
-        <div class="row">
-          <div class="col s12">
-            <div class="col s12 m6 l4 center orderFlow">
-              <fiqure>
+        <div class="area js-area">
+          <div class="wrap js-wrap">
+            <div class="item js-item">
+              <div class="col s12 m6 l4 center orderFlow"> </div>
+              <div class="col s12 m6 l4 center orderFlow"> </div>
+              <div class="col s12 m6 l4 center orderFlow">
                 <img src="./img/flow01.png" style="width:100%">
                 <figcaption>まずLINEやメール、お電話で<br>お問い合わせください</figcaption>
-              </fiqure>
+              </div>
             </div>
-
-            <div class="col s12 m6 l4 center">
-              <img src="./img/flow02.png" style="width:100%">
-              <p>似顔絵のイメージや<br>ご希望をお伝えください</p>
+            <div class="item js-item">
+              <div class="col s12 m6 l4 center ovderFlow">
+                <img src="./img/flow02.png" style="width:100%">
+                <figcaption>似顔絵のイメージや<br>ご希望をお伝えください</figcaption>
+              </div>
+              <div class="col s12 m6 l4 center">
+                <img src="./img/flow03.png" style="width:100%">
+                <p>費用確認後ご入金<br>をお願いいたします</p>
+              </div>
+              <div class="col s12 m6 l4 center">
+                <img src="./img/flow04.png" style="width:100%">
+                <p>下書きの段階での修正<br>は無料とさせていただきます</p>
+              </div>
             </div>
-            <div class="col s12 m6 l4 center">
-              <img src="./img/flow03.png" style="width:100%">
-              <p>費用確認後ご入金<br>をお願いいたします</p>
-            </div>
-            <div class="col s12 m6 l4 center">
-              <img src="./img/flow04.png" style="width:100%">
-              <p>下書きの段階での修正<br>は無料とさせていただきます</p>
-            </div>
-            <div class="col s12 m6 l4 center">
-              <img src="./img/flow05.png" style="width:100%">
-              <p>完成イメージをお送りします。<br>修正は出来る範囲となります</p>
-            </div>
-            <div class="col s12 m6 l4 center">
-              <img src="./img/flow06.png" style="width:100%">
-              <p>ご発送いたします。<br>納品完了です</p>
+            <div class="item js-item">
+              <div class="col s12 m6 l4 center">
+                <img src="./img/flow05.png" style="width:100%">
+                <p>完成イメージをお送りします。<br>修正は出来る範囲となります</p>
+              </div>
+              <div class="col s12 m6 l4 center">
+                <img src="./img/flow06.png" style="width:100%">
+                <p>ご発送いたします。<br>納品完了です</p>
+              </div>
+              <div class="col s12 m6 l4 center orderFlow"> </div>
             </div>
           </div>
         </div>
@@ -427,11 +435,11 @@
       <div class="container">
         <div class="row">
           <div class="col s12">
-            <h3 class="center grey-text text-darken-3">簡単なお見積もり_</h3>
+            <h3 class="center grey-text text-darken-3" style="margin-top:0em;">簡単なお見積もり</h3>
 
             <div class="aos-init" data-aos-once="false" data-aos="fade-up" data-aos-duration="1000"
-              data-aos-offset="300" style="height:6.45vw;top:200px;">
-              <img src="./img/price_chan.png" style="width:100%;position:absolute;z-index: 999;">
+              data-aos-offset="1000" style="height:4em">
+              <img src="./img/price_chan.png" style="width:100%;position:absolute;z-index: 999;bottom:-3px">
             </div>
             <table class="highlight centered osare-table" style="z-index: 100;">
               <thead>
@@ -848,9 +856,11 @@
   <script src="./js/materialize.min.js"></script>
 
   <script src="./js/swiper-bundle.min.js"></script>
+  <!-- スクロール -->
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/ScrollTrigger.min.js"></script>
   <!-- Vue -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
   <script src="./js/vue.js"></script>
   <script>
     // var versioningNum = new Date().getTime();
