@@ -121,12 +121,13 @@ for (var i = 0; i < sizeCost.length; i++) {
 function comicomiChange() {
   var comis = document.getElementsByClassName("comi");
   for (var i = 0; i < comis.length; i++) {
-    comis[i].classList.add("myChoice");
-    comis[i].classList.add("pulse");
+    comis[i].classList.add("myChoice_comi");
+    comis[i].classList.add("poyoyon3");
   }
   setTimeout(function() {
     for (var i = 0; i < comis.length; i++) {
-      comis[i].classList.remove("pulse");
+      // comis[i].classList.remove("pulse");
+      comis[i].classList.add("myChoice");
     }
   }, 2000);
 }
