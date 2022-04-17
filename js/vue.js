@@ -109,12 +109,16 @@ var app = new Vue({
 });
 
 //金額計算
+var comicomiFlag = false;
 var sizeCost = document.getElementsByClassName("sizeCost");
 for (var i = 0; i < sizeCost.length; i++) {
   sizeCost[i].addEventListener("click", function() {
     this.classList.add("myChoice"); //色を塗る
     removeElseChoice(this, sizeCost); //他の色を消す
-    comicomiChange();
+    if (comicomiFlag == false) {
+      comicomiChange();
+      comicomiFlag == true;
+    }
   });
 }
 //コミコミのアニメーション
