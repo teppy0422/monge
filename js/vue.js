@@ -133,7 +133,7 @@ function comicomiChange() {
       // comis[i].classList.remove("pulse");
       comis[i].classList.add("myChoice");
     }
-  }, 2000);
+  }, 1000);
 }
 // 同じグループの自分以外のクラスを外す
 function removeElseChoice(nowSelect, targetClass) {

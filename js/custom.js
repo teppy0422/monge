@@ -175,48 +175,52 @@ setTimeout(isHidden, 100);
 
 // 横にスクロール
 window.addEventListener("load", function() {
-  //プラグインを定義
-  gsap.registerPlugin(ScrollTrigger);
-  const area = document.querySelector(".js-area");
-  const wrap = document.querySelector(".js-wrap");
-  const items = document.querySelectorAll(".js-item");
-  const num = items.length;
+  var winSize = this.window.innerWidth;
+  if (winSize > 740) {
+    //プラグインを定義_PC
+    gsap.registerPlugin(ScrollTrigger);
+    const area = document.querySelector(".js-area");
+    const wrap = document.querySelector(".js-wrap");
+    const items = document.querySelectorAll(".js-item");
+    const num = items.length;
 
-  //横幅を指定
-  gsap.set(wrap, { width: num * 100 + "%" });
-  gsap.set(items, { width: 100 / num + "%" });
+    //横幅を指定
+    gsap.set(wrap, { width: num * 100 + "%" });
+    gsap.set(items, { width: 100 / num + "%" });
 
-  gsap.to(items, {
-    xPercent: -100 * (num - 1), //x方向に移動させる
-    ease: "none",
-    scrollTrigger: {
-      trigger: area, //トリガー
-      start: "top top", //開始位置
-      end: "+=1000", //終了位置
-      pin: true, //ピン留め
-      scrub: true, //スクロール量に応じて動かす
-    },
-  });
-  //sp
-  gsap.registerPlugin(ScrollTrigger);
-  const area_sp = document.querySelector(".js-area_sp");
-  const wrap_sp = document.querySelector(".js-wrap_sp");
-  const items_sp = document.querySelectorAll(".js-item_sp");
-  const num_sp = items_sp.length;
+    gsap.to(items, {
+      xPercent: -100 * (num - 1), //x方向に移動させる
+      ease: "none",
+      scrollTrigger: {
+        trigger: area, //トリガー
+        start: "top top", //開始位置
+        end: "+=1000", //終了位置
+        pin: true, //ピン留め
+        scrub: true, //スクロール量に応じて動かす
+      },
+    });
+  } else {
+    //プラグインを定義_sp
+    gsap.registerPlugin(ScrollTrigger);
+    const area_sp = document.querySelector(".js-area_sp");
+    const wrap_sp = document.querySelector(".js-wrap_sp");
+    const items_sp = document.querySelectorAll(".js-item_sp");
+    const num_sp = items_sp.length;
 
-  //横幅を指定
-  gsap.set(wrap_sp, { width: num_sp * 100 + "%" });
-  gsap.set(items_sp, { width: 100 / num_sp + "%" });
+    //横幅を指定
+    gsap.set(wrap_sp, { width: num_sp * 100 + "%" });
+    gsap.set(items_sp, { width: 100 / num_sp + "%" });
 
-  gsap.to(items_sp, {
-    xPercent: -100 * (num_sp - 1), //x方向に移動させる
-    ease: "none",
-    scrollTrigger: {
-      trigger: area_sp, //トリガー
-      start: "top top", //開始位置
-      end: "+=1000", //終了位置
-      pin: true, //ピン留め
-      scrub: true, //スクロール量に応じて動かす
-    },
-  });
+    gsap.to(items_sp, {
+      xPercent: -100 * (num_sp - 1), //x方向に移動させる
+      ease: "none",
+      scrollTrigger: {
+        trigger: area_sp, //トリガー
+        start: "top top", //開始位置
+        end: "+=1000", //終了位置
+        pin: true, //ピン留め
+        scrub: true, //スクロール量に応じて動かす
+      },
+    });
+  }
 });
