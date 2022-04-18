@@ -224,3 +224,24 @@ window.addEventListener("load", function() {
     });
   }
 });
+
+// darkmode
+var flagMode = false;
+function changeMode() {
+  var btnMode = document
+    .getElementById("btnMode")
+    .getElementsByClassName("material-icons");
+  if (flagMode == false) {
+    // ダークモード
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+    btnMode[0].innerHTML = "wb_sunny";
+    flagMode = true;
+  } else {
+    // ライトモード
+    document.body.classList.remove("dark-theme");
+    document.body.classList.add("light-theme");
+    btnMode[0].innerHTML = "brightness_2";
+    flagMode = false;
+  }
+}

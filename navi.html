@@ -1,16 +1,18 @@
 <header id="myHeader">
   <div class="navbar-fixed">
     <nav style="background-color: pink;margin:0px;width:100%;">
-      <div class="nav-wrapper container" style="height:4em;">
+      <div class="nav-wrapper container" style="height:4em;width:95%">
+
         <section class="pc col" style="display: flex;">
-          <img src="./img/logo.png" style="height:4em;float: left;margin-right:10px;">
-          <div class="neu_menu" style="">
+          <img src="./img/logo.png" style="height:4em;float:left;margin-right:10px;">
+          <div class="neu_menu">
             <div onclick="load_html('welcome.html#vue_cost','#main','menu_01');" class="neu" id="menu_01">
               ウェルカムボード</div>
             <div class="neu">似顔絵単体</div>
             <div class="neu">名刺</div>
             <div onclick="load_html('sns_icon.html#','#main','menu_04')" class="neu" id="menu_04">SNS</div>
-            <div onclick="load_html('sns_icon.html#','#main','menu_04')" class="neu" id="menu_04">SNS</div>
+
+            <div onclick="changeMode()" class="neu" id="btnMode"><i class="material-icons">brightness_2</i></div>
             <div onclick="load_html('sns_icon.html#','#main','menu_04')" class="neu" id="menu_04">SNS</div>
             <div onclick="load_html('sns_icon.html#','#main','menu_04')" class="neu" id="menu_04">SNS</div>
             <div onclick="load_html('sns_icon.html#','#main','menu_04')" class="neu" id="menu_04">SNS</div>
@@ -26,9 +28,9 @@
           </div>
         </section>
 
-        <section class="sp" style="display: flex;">
+        <section class="sp col" style="display: flex;">
           <img src="./img/logo_s.png" style="height:4em;float:left">
-          <div class="neu_menu" style="width:85%">
+          <div class="neu_menu" style="width:80%">
             <div onclick="load_html('welcome.html#vue_cost','#main','menu_01sp');" class="neu" id="menu_01sp"><img
                 src="./img/welcom_letter.svg" style="height:2em;"></div>
             <div onclick="load_html('sns_icon.html','#main','menu_04sp')" class="neu" id="menu_04sp"><img
@@ -53,4 +55,5 @@
       </div>
     </nav>
   </div>
+
 </header>

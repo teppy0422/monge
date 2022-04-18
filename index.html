@@ -71,6 +71,7 @@
     _______
     SEO
   </pre>
+
   <div id="main">
     <div class="container" style="width:100%;">
       <div class="center">
@@ -969,6 +970,14 @@
       });
       //読み込み完了後の処理
       $(document).ajaxStop(function () {
+        const jstNow = new Date(
+          Date.now() + (new Date().getTimezoneOffset() + 9 * 60) * 60 * 1000
+        );
+        const jstHour = jstNow.getHours(); console.log(jstHour);
+        if (jstHour > 6 && jstHour < 19) {
+        } else {
+          document.getElementById("btnMode").click();
+        }
         //modalを有効
         $('.modal').modal({
           startingTop: '0%',
@@ -992,7 +1001,6 @@
 
     //AOSを初期化
     AOS.init({
-
       duration: 500,
       delay: 200,
       once: false

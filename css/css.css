@@ -922,3 +922,39 @@
     opacity: 1;
   }
 }
+
+
+:root {
+  --black: rgb(32, 32, 35);
+  --white: #fff;
+  --purple: #805AD5;
+  --yellow: #F6E059;
+}
+
+/* darkmode */
+Result Skip Results Iframe EDIT ON .light-theme {
+  background: var(--white);
+  color: var(--black);
+  transition: .5s;
+}
+
+.dark-theme {
+  background: var(--black);
+  color: var(--white);
+  transition: .5s;
+}
+
+.light-theme #btnMode {
+  background: var(--purple);
+  color: var(--white);
+}
+
+.dark-theme #btnMode {
+  background: #F6AD55;
+  color: var(--black);
+}
+
+#btnMode {
+  background: var(--purple);
+  color: var(--white);
+}

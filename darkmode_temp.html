@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --black: rgb(32, 32, 35);
+      --white: #fff;
+    }
+
+    Result Skip Results Iframe EDIT ON .light-theme {
+      background: var(--white);
+      color: var(--black);
+      transition: .5s;
+    }
+
+    .dark-theme {
+      background: var(--black);
+      color: var(--white);
+      transition: .5s;
+    }
+  </style>
+</head>
+
+<body>
+  <input id="btn-mode" type="checkbox"> ダークモード
+  <p>ぼんちゃん</p>
+
+
+
+
+  <script>
+    // チェックボックスの取得
+    const btn = document.querySelector("#btn-mode");
+
+    // チェックした時の挙動
+    btn.addEventListener("change", () => {
+      if (btn.checked == true) {
+        // ダークモード
+        document.body.classList.remove("light-theme");
+        document.body.classList.add("dark-theme");
+      } else {
+        // ライトモード
+        document.body.classList.remove("dark-theme");
+        document.body.classList.add("light-theme");
+      }
+    });
+
+  </script>
+</body>
+
+</html>
