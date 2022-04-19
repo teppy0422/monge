@@ -62,12 +62,10 @@
   <div id="navi">
   </div>
   <pre style="line-height: 1.5em;">
-    スマホでみたときのはみ出し
     簡単な見積もりを仕上げる
     フォーム送信
     ご注文の流れの文字位置
     ボタンのアクションの見直し
-    ラメの光り方
     resize
     _______
     フォントと配色
@@ -490,7 +488,7 @@
   <div id="app" class="section valign-wrapper">
     <div class="container">
       <div class="row">
-        <div class="col s12">
+        <div class="col s12" style="padding:0px">
           <h3 class="center aos-init" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000"
             style="margin-top:0em;">簡単なお見積もり</h3>
 
@@ -622,26 +620,26 @@
           <div class="divider"></div>
         </div>
 
-        <a class="btn" data-position="bottom" style="display: inline;">オプション</a>
-        <div class="row">
+        <a class="btn" data-position="bottom" style="display: inline;" id="temp">オプション</a>
+        <div class="row" style="margin-bottom: 0px;">
           <div class="col s12">
             <h5>1.小物<span style="font-size:16px;"> (+2000円〜)</span></h5>
             <p>小物・複雑な背景・車など</p>
           </div>
           <div class="col s6">
-            <table class="simple_table">
-              <tr>
-                <td class="hoverable backCost" value="2000" @click="costChange(2,$event,costs);toast()">有り</td>
-                <td class="hoverable backCost" value="0" @click="costChange(2,$event,costs);toast()">なし</td>
-              </tr>
-            </table>
+            <div style="display:flex;">
+              <div class="hoverable backCost btn_select" value="2000" @click="costChange(2,$event,costs);toast()">有り
+              </div>
+              <div class="hoverable backCost btn_select" value="0" @click="costChange(2,$event,costs);toast()">なし
+              </div>
+            </div>
           </div>
           <div class="col s6">
             <h5 style="text-align:right">{{backCostValue}}</h5>
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" style="margin-bottom: 0px;">
           <div class="divider"></div>
           <div class="col s12">
             <h5>2.和柄<span style="font-size:16px;"> (+1000円〜)</span></h5>
@@ -649,40 +647,39 @@
               ※白無垢は料金内(無料)です</p>
           </div>
           <div class="col s6">
-            <table class="simple_table">
-              <tr>
-                <td class="hoverable japCost" value="1000" @click="costChange(3,$event,costs);toast()">有り</td>
-                <td class="hoverable japCost" value="0" @click="costChange(3,$event,costs);toast()">なし</td>
-              </tr>
-            </table>
+            <div style="display: flex;">
+              <div class="hoverable japCost btn_select" value="1000" @click="costChange(3,$event,costs);toast()">有り
+              </div>
+              <div class="hoverable japCost btn_select" value="0" @click="costChange(3,$event,costs);toast()">なし</div>
+            </div>
           </div>
           <div class="col s6">
             <h5 style="text-align:right;">{{japCostValue}}</h5>
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" style="margin-bottom:0px;">
           <div class="divider"></div>
           <div class="col s12">
             <h5>3.額縁<span id="frameText" style="font-size:16px;"> (+0円)</span></h5>
             <p>色紙の場合はミニイーゼルになります</p>
           </div>
           <div class="col s6">
-            <table class="simple_table">
-              <tr>
-                <td class="hoverable frameCost" id="frameEvent" value="99" @click="costChange(4,$event,costs);toast()">
-                  有り
-                </td>
-                <td class="hoverable frameCost" value="0" @click="costChange(4,$event,costs);toast()">なし</td>
-              </tr>
-            </table>
+            <div style="display: flex;">
+              <div class="hoverable frameCost btn_select" id="frameEvent" value="99"
+                @click="costChange(4,$event,costs);toast()">
+                有り
+              </div>
+              <div class="hoverable frameCost btn_select" value="0" @click="costChange(4,$event,costs);toast()">なし</div>
+
+            </div>
           </div>
           <div class="col s6">
             <h5 style="text-align:right;">{{frameCostValue}}</h5>
           </div>
         </div>
 
-        <div class="row" id="temp">
+        <div class="row" style="margin-bottom: 0px;">
           <div class="divider"></div>
           <a class="btn" data-position="bottom" style="display:inline;">無料のオプション</a>
           <div class="col s12">
@@ -694,13 +691,13 @@
             </h5>
           </div>
           <div class="col s6">
-            <table class="simple_table">
-              <tr>
-                <td class="hoverable lameCost" value="0" @click="costChange(0,$event,costs);toast()">ラメ無し</td>
-                <td class="hoverable lameCost" value="0" @click="costChange(0,$event,costs);toast()">少なめ</td>
-                <td class="hoverable lameCost" value="0" @click="costChange(0,$event,costs);toast()">多め</td>
-              </tr>
-            </table>
+            <div style="display:flex;">
+              <div class="hoverable lameCost btn_select" value="0" @click="costChange(0,$event,costs);toast()">ラメ無し
+              </div>
+              <div class="hoverable lameCost btn_select" value="0" @click="costChange(0,$event,costs);toast()">少なめ</div>
+              <div class="hoverable lameCost btn_select" value="0" @click="costChange(0,$event,costs);toast()">多め</div>
+
+            </div>
           </div>
         </div>
 

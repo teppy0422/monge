@@ -222,22 +222,18 @@ window.addEventListener("load", function() {
 
 // darkmode
 var flagMode = false;
-function changeMode() {
-  var btnMode = document
-    // アイコンの切り替え用
-    .getElementById("btnMode")
-    .getElementsByClassName("material-icons");
+function changeMode(obj) {
   if (flagMode == false) {
     // ダークモード
     document.body.classList.remove("light-theme");
     document.body.classList.add("dark-theme");
-    btnMode[0].innerHTML = "wb_sunny";
+    obj.innerHTML = '<i class="material-icons">wb_sunny</i>';
     flagMode = true;
   } else {
     // ライトモード
     document.body.classList.remove("dark-theme");
     document.body.classList.add("light-theme");
-    btnMode[0].innerHTML = "brightness_2";
+    obj.innerHTML = '<i class="material-icons">brightness_2</i>';
     flagMode = false;
   }
 }
@@ -263,18 +259,18 @@ const createStar = () => {
   minSize = 8;
   maxSize = 12;
 
-  // 雪のサイズ
+  // 星のサイズ
   let snowSize = Math.random() * (maxSize - minSize) + minSize;
   snow.style.width = snowSize + "px";
   snow.style.height = snowSize + "px";
-  // 雪の降り始めの横位置
+  // 星の降り始めの横位置
   snow.style.left = Math.random() * 100 + "%";
   snow.style.top = Math.random() * 100 + "%";
   snows.appendChild(snow);
-  // 10秒後に雪を消す
+  // 10秒後に星を消す
   setTimeout(() => {
     snow.remove();
   }, 10000);
 };
 
-setInterval(createStar, 500);
+setInterval(createStar, 1000);

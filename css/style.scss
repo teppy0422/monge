@@ -635,6 +635,7 @@ p {
 
 .comicomi {
   display: flex;
+  white-space: nowrap;
 }
 
 .comicomi p {
@@ -654,6 +655,7 @@ p {
   /* background-color: rgba(250, 100, 100, 0.8) !important; */
   background: #00aaff !important;
   color: #fff !important;
+  transition: 0.3s;
 }
 
 .myChoice div {
@@ -736,12 +738,6 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* ラメ */
-.back {
-  position: relative;
-  vertical-align: middle;
 }
 
 .order_tip {
@@ -845,6 +841,11 @@ form.form_welcome {
   }
 }
 
+/* ラメ星 */
+.back {
+  position: relative;
+  vertical-align: middle;
+}
 .stars {
   position: relative;
   z-index: 50;
@@ -866,7 +867,7 @@ form.form_welcome {
   background-color: #edd923;
   position: absolute;
   animation: starFlash 10s linear;
-  z-index: 2;
+  z-index: 1;
 }
 @keyframes starFlash {
   0% {
@@ -895,5 +896,17 @@ form.form_welcome {
 
   100% {
     opacity: 1;
+  }
+}
+
+.btn_select {
+  margin: 6px 12px 6px 0px !important;
+  background-color: #fff;
+  color: #000;
+  border: solid 1px var(--black);
+  padding: 8px 16px;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
   }
 }

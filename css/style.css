@@ -658,6 +658,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  white-space: nowrap;
 }
 
 .comicomi p {
@@ -674,6 +675,8 @@ p {
   /* background-color: rgba(250, 100, 100, 0.8) !important; */
   background: #00aaff !important;
   color: #fff !important;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .myChoice div {
@@ -807,12 +810,6 @@ p {
           align-items: center;
 }
 
-/* ラメ */
-.back {
-  position: relative;
-  vertical-align: middle;
-}
-
 .order_tip {
   background: var(--yellow);
   padding: 2px 0px;
@@ -933,6 +930,12 @@ form.form_welcome .row:last-child {
   border-radius: 0px 0px 10px 10px;
 }
 
+/* ラメ星 */
+.back {
+  position: relative;
+  vertical-align: middle;
+}
+
 .stars {
   position: relative;
   z-index: 50;
@@ -946,7 +949,7 @@ form.form_welcome .row:last-child {
   position: absolute;
   -webkit-animation: starFlash 10s linear;
           animation: starFlash 10s linear;
-  z-index: 2;
+  z-index: 1;
 }
 
 @-webkit-keyframes starFlash {
@@ -995,5 +998,18 @@ form.form_welcome .row:last-child {
   100% {
     opacity: 1;
   }
+}
+
+.btn_select {
+  margin: 6px 12px 6px 0px !important;
+  background-color: #fff;
+  color: #000;
+  border: solid 1px var(--black);
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.btn_select:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
