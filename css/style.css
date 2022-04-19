@@ -774,7 +774,7 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   z-index: 999;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0px;
 }
@@ -1007,6 +1007,7 @@ form.form_welcome .row:last-child {
   border: solid 1px var(--black);
   padding: 8px 16px;
   border-radius: 5px;
+  white-space: nowrap;
 }
 
 .btn_select:hover {

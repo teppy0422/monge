@@ -62,6 +62,7 @@
   <div id="navi">
   </div>
   <pre style="line-height: 1.5em;">
+    フォームのお名前が選択できない
     簡単な見積もりを仕上げる
     フォーム送信
     ご注文の流れの文字位置
@@ -630,7 +631,8 @@
             <div style="display:flex;">
               <div class="hoverable backCost btn_select" value="2000" @click="costChange(2,$event,costs);toast()">有り
               </div>
-              <div class="hoverable backCost btn_select" value="0" @click="costChange(2,$event,costs);toast()">なし
+              <div class="hoverable backCost btn_select myChoice" value="0" @click="costChange(2,$event,costs);toast()">
+                なし
               </div>
             </div>
           </div>
@@ -774,7 +776,7 @@
         <form class="col s12 form_welcome">
 
           <div class="row">
-            <div class="input-field col s12 m6">
+            <div class="input-field col s12">
               <i class="material-icons prefix">account_circle</i>
               <input id="full_name" type="text" class="validate">
               <label for=" full_name" class="form_welcome">お名前
@@ -786,7 +788,6 @@
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">email</i>
-
               <input id="email" type="email" class="validate">
               <label for="email" class="form_welcome">メールアドレス
                 <span class="new badge" data-badge-caption="">必須</span>
