@@ -61,12 +61,14 @@
   </section>
   <div id="navi">
   </div>
-  <pre>
+  <pre style="line-height: 1.5em;">
     スマホでみたときのはみ出し
     簡単な見積もりを仕上げる
     フォーム送信
     ご注文の流れの文字位置
     ボタンのアクションの見直し
+    ラメの光り方
+    resize
     _______
     フォントと配色
     _______
@@ -489,7 +491,8 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <h3 class="center" style="margin-top:0em;">簡単なお見積もり</h3>
+          <h3 class="center aos-init" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000"
+            style="margin-top:0em;">簡単なお見積もり</h3>
 
           <div class="aos-init pc" data-aos-once="false" data-aos="fade-up" data-aos-duration="1000"
             data-aos-offset="800" style="height:4em">
@@ -679,31 +682,15 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="temp">
           <div class="divider"></div>
           <a class="btn" data-position="bottom" style="display:inline;">無料のオプション</a>
           <div class="col s12">
             <h5>1.ラメを付ける
-              <a class="back waves-effect waves-light btn modal-trigger" href="#modal_lame">詳しく見る
-                <div class="stars">
-                  <span class="s"></span>
-                  <span class="s"></span>
-                  <span class="s"></span>
-                  <span class="s"></span>
-                  <span class="s"></span>
-                  <span class="m"></span>
-                  <span class="m"></span>
-                  <span class="m"></span>
-                  <span class="m"></span>
-                  <span class="m"></span>
-                  <span class="l"></span>
-                  <span class="l"></span>
-                  <span class="l"></span>
-                  <span class="l"></span>
-                  <span class="l"></span>
-                </div>
+              <a class="stars btn waves-effect waves-light modal-trigger" href="#modal_lame">
+                <span style="vertical-align: middle;z-index: 3;">詳しく見る</span>
+                <div class="star"></div>
               </a>
-
             </h5>
           </div>
           <div class="col s6">
@@ -784,13 +771,13 @@
 
   <div id="estimate" class="section valign-wrapper">
     <div class="container">
-      <h3 class="center">ご注文</h3>
+      <h3 class="center aos-init" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">ご注文</h3>
       <img src="./img/order_title.png" style="width:100%;">
       <div class="row">
         <form class="col s12 form_welcome">
 
           <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field col s12 m6">
               <i class="material-icons prefix">account_circle</i>
               <input id="full_name" type="text" class="validate">
               <label for=" full_name" class="form_welcome">お名前

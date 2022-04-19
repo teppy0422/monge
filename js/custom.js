@@ -253,3 +253,28 @@ function changeColor(hoge) {
     hoge.style.color = "#f00";
   }
 }
+
+let snows = document.querySelector(".stars");
+
+const createStar = () => {
+  let snow = document.createElement("span");
+  snow.className = "star";
+
+  minSize = 8;
+  maxSize = 12;
+
+  // 雪のサイズ
+  let snowSize = Math.random() * (maxSize - minSize) + minSize;
+  snow.style.width = snowSize + "px";
+  snow.style.height = snowSize + "px";
+  // 雪の降り始めの横位置
+  snow.style.left = Math.random() * 100 + "%";
+  snow.style.top = Math.random() * 100 + "%";
+  snows.appendChild(snow);
+  // 10秒後に雪を消す
+  setTimeout(() => {
+    snow.remove();
+  }, 10000);
+};
+
+setInterval(createStar, 500);
