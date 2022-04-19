@@ -1,3 +1,17 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+a,
+p {
+  font-size: 1.2em;
+}
+
 .swiper--wrapper {
   /* wrapperのサイズを調整 */
   width: 100%;
@@ -22,22 +36,23 @@
 }
 
 .swiper-button-prev {
-  background: url(https://haniwaman.com/cms/wp-content/uploads/2018/05/swiper3.png) no-repeat center center / contain;
+  background: url(https://haniwaman.com/cms/wp-content/uploads/2018/05/swiper3.png)
+    no-repeat center center / contain;
 }
 
 .swiper-button-next {
-  background: url(https://haniwaman.com/cms/wp-content/uploads/2018/05/swiper3.png) no-repeat center center / contain;
+  background: url(https://haniwaman.com/cms/wp-content/uploads/2018/05/swiper3.png)
+    no-repeat center center / contain;
   transform: scale(-1, 1);
 }
 
-
 .swiper-pagination-bullet {
-  line-height: calc(100vh/6);
+  line-height: calc(100vh / 6);
   background: #000 !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: #FFB7C4 !important;
+  background: #ffb7c4 !important;
 }
 
 .box10 {
@@ -257,9 +272,11 @@
 .bg_mesh::after {
   content: "";
   position: absolute;
-  background-image: linear-gradient(90deg,
+  background-image: linear-gradient(
+      90deg,
       rgba(100, 100, 100, 0.1) 50%,
-      transparent 10%),
+      transparent 10%
+    ),
     linear-gradient(rgba(100, 100, 100, 0.2) 50%, transparent 10%);
   top: 0;
   right: 0;
@@ -296,7 +313,7 @@
   color: #999;
 }
 
-.mixi_icon+p {
+.mixi_icon + p {
   margin: 0;
 }
 
@@ -361,7 +378,6 @@
   /* IE10かららしい */
   overflow-x: auto;
   white-space: nowrap !important;
-
 }
 
 .neu_menu::-webkit-scrollbar {
@@ -482,7 +498,7 @@
 
 .osare-table tbody td {
   border: #b53d44;
-  background-color: #fff9ff;
+  background-color: rgba(255, 250, 250, 0.1);
   background-clip: padding-box;
   border: solid 1px #b53d44;
 }
@@ -492,7 +508,7 @@
   font-weight: bold;
   background-color: #fda5be;
   border: solid 1px #b53d44 !important;
-  font-size: min(5vw, 40px);
+  font-size: clamp(14px, 5vw, 40px);
 }
 
 .osare-table thead th:nth-child(3):first-letter {
@@ -533,7 +549,7 @@
 /* ボディデータ */
 .osare-table tbody td {
   text-align: center;
-  padding: 2px 1px;
+  padding: 0px;
   white-space: nowrap;
 }
 
@@ -580,7 +596,7 @@
 
 .price_middle {
   text-align: center;
-  font-size: min(4vw, 30px);
+  font-size: clamp(14px, 4vw, 30px);
 }
 
 .price_middle::after {
@@ -606,7 +622,7 @@
   text-align: right;
   padding-right: 4px;
   color: #fff;
-  font-size: min(3vw, 16px);
+  font-size: clamp(14px, 3vw, 16px);
 }
 
 .table_side div:nth-child(2) {
@@ -614,7 +630,7 @@
   padding-left: 4px;
   vertical-align: bottom;
   color: #fff;
-  font-size: min(3vw, 16px);
+  font-size: clamp(14px, 3vw, 16px);
 }
 
 .comicomi {
@@ -622,23 +638,23 @@
 }
 
 .comicomi p {
-  font-size: min(3vw, 18px);
+  font-size: clamp(14px, 3vw, 18px);
   background-color: #fc87a8;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   padding: 3px 6px;
   border-radius: 10px;
   margin: 5px 10px 10px 0px;
 }
 
-.comicomi p::after {}
+.comicomi p::after {
+}
 
 .myChoice {
   /* background-color: rgba(250, 100, 100, 0.8) !important; */
   background: #00aaff !important;
-  color: #FFF !important;
+  color: #fff !important;
 }
-
 
 .myChoice div {
   color: #fff;
@@ -651,7 +667,6 @@
 }
 
 @keyframes poyoyon3 {
-
   0%,
   40% {
     transform: skew(0deg, 0deg);
@@ -689,7 +704,6 @@
     background-color: #00aaff;
   }
 }
-
 
 #toast {
   /* visibility: hidden; */
@@ -736,7 +750,6 @@
   font-weight: bold;
   color: white;
   vertical-align: middle;
-
 }
 
 .stars {
@@ -758,45 +771,27 @@
   height: 10px;
 
   /*星のサイズ調節*/
-  transform: scale(0.20);
+  transform: scale(0.2);
 }
 
 .stars span.s:before {
-
   /*20px 20pxが中央*/
-  box-shadow: 20px 20px #FFFFFF;
+  box-shadow: 20px 20px #ffffff;
 }
 
 .stars span.m:before {
   box-shadow:
-    /*1段目*/
-    20px 10px #FFF176,
-    /*2段目*/
-    10px 20px #FFF176,
-    20px 20px #FFFFFF,
-    30px 20px #FFF176,
-    /*3段目*/
-    20px 30px #FFF176
+    /*1段目*/ 20px 10px #fff176, /*2段目*/ 10px 20px #fff176,
+    20px 20px #ffffff, 30px 20px #fff176, /*3段目*/ 20px 30px #fff176;
 }
 
 .stars span.l:before {
   box-shadow:
-    /*0段目*/
-    20px 0px #FDD835,
-    /*1段目*/
-    20px 10px #FFF176,
-    /*2段目*/
-    0px 20px #FDD835,
-    10px 20px #FFF176,
-    20px 20px #FFFFFF,
-    30px 20px #FFF176,
-    40px 20px #FDD835,
-    /*3段目*/
-    20px 30px #FFF176,
-    /*4段目*/
-    20px 40px #FDD835;
+    /*0段目*/ 20px 0px #fdd835, /*1段目*/ 20px 10px #fff176,
+    /*2段目*/ 0px 20px #fdd835, 10px 20px #fff176, 20px 20px #ffffff,
+    30px 20px #fff176, 40px 20px #fdd835, /*3段目*/ 20px 30px #fff176,
+    /*4段目*/ 20px 40px #fdd835;
 }
-
 
 /*
 星の位置とアニメーション指定
@@ -892,7 +887,6 @@
   animation: star-anim 7s 4s infinite;
 }
 
-
 @keyframes star-anim {
   0% {
     opacity: 0;
@@ -923,38 +917,99 @@
   }
 }
 
+.order_tip {
+  background: var(--yellow);
+  padding: 2px 0px;
+}
 
 :root {
   --black: rgb(32, 32, 35);
   --white: #fff;
-  --purple: #805AD5;
-  --yellow: #F6E059;
+  --purple: #805ad5;
+  --yellow: #e3cc38;
+  --blue: #00aaff;
 }
 
 /* darkmode */
-Result Skip Results Iframe EDIT ON .light-theme {
+Result Skip Results iframe EDIT ON .light-theme {
   background: var(--white);
   color: var(--black);
-  transition: .5s;
+  transition: all 1s;
+  #btnMode {
+    background: var(--purple);
+    color: var(--white);
+    transition: all 1s;
+  }
 }
 
 .dark-theme {
+  background-image: url(../img/bg_patt_dark.png) !important;
   background: var(--black);
   color: var(--white);
-  transition: .5s;
-}
-
-.light-theme #btnMode {
-  background: var(--purple);
-  color: var(--white);
-}
-
-.dark-theme #btnMode {
-  background: #F6AD55;
-  color: var(--black);
+  transition: all 1s;
+  a {
+    color: pink;
+  }
+  .btn {
+    color: var(--white);
+  }
+  #btnMode {
+    background: #f6ad55;
+    color: var(--black);
+    transition: all 1s;
+  }
+  .section:nth-child(2n) {
+    background-color: #333;
+  }
+  label {
+    color: var(--white) !important;
+  }
+  input,
+  textarea {
+    border-bottom: 1px solid var(--black) !important;
+  }
+  .form_welcome {
+    color: var(--black) !important;
+  }
+  .divider {
+    background-color: var(--white);
+  }
 }
 
 #btnMode {
   background: var(--purple);
   color: var(--white);
+}
+.eshi_detail {
+  img {
+    height: 2em;
+    margin-right: 0.5em;
+    vertical-align: middle;
+  }
+  li {
+    margin: 6px 0px;
+  }
+  a {
+    vertical-align: middle !important;
+    padding-bottom: 3px;
+    text-decoration: none;
+    &:hover {
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+form.form_welcome {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .row {
+    background: #fafafa;
+    margin-bottom: 0px;
+    &:first-child {
+      border-radius: 10px 10px 0px 0px;
+    }
+    &:last-child {
+      border-radius: 0px 0px 10px 10px;
+    }
+  }
 }

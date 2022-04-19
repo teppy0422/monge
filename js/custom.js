@@ -116,11 +116,6 @@ $(".thumbnails img").click(function() {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  var elems = document.querySelectorAll("select");
-  var instances = M.FormSelect.init(elems, options);
-});
-
 // materialize.jsのセレクトボックス用
 $(function() {
   $(document).ready(function() {
@@ -229,6 +224,7 @@ window.addEventListener("load", function() {
 var flagMode = false;
 function changeMode() {
   var btnMode = document
+    // アイコンの切り替え用
     .getElementById("btnMode")
     .getElementsByClassName("material-icons");
   if (flagMode == false) {
@@ -243,5 +239,17 @@ function changeMode() {
     document.body.classList.add("light-theme");
     btnMode[0].innerHTML = "brightness_2";
     flagMode = false;
+  }
+}
+// 編集中の項目までのリンク
+function move_temp(_id) {
+  window.scrollTo(0, document.getElementById(_id).getBoundingClientRect().top);
+}
+
+function changeColor(hoge) {
+  if (hoge.value == 0) {
+    hoge.style.color = "";
+  } else {
+    hoge.style.color = "#f00";
   }
 }
