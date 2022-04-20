@@ -62,12 +62,12 @@
   <div id="navi">
   </div>
   <pre style="line-height: 1.5em;">
-    フォームのお名前が選択できない
     簡単な見積もりを仕上げる
     フォーム送信
     ご注文の流れの文字位置
     ボタンのアクションの見直し
     resize
+    キャッチコピーの追加
     _______
     フォントと配色
     _______
@@ -521,8 +521,8 @@
             <tbody>
               <tr>
                 <td>1人</td>
-                <td class="hoverable sizeCost" value="9000" size="sikisi"
-                  @click="costChange(1,$event,costs,'色紙');toast();">
+                <td class="hoverable size_people" @click="costChange('size_people','色紙_1名',9000);"
+                  onclick="colorChange(this,'size_people');">
                   <div class="center price_top order_tip pc_vi">1名様プレゼントにおすすめ
                   </div>
                   <div class="center price_middle">9,000</div>
@@ -531,17 +531,21 @@
                     <div class="center price_bottom" style="font-size:11px;">1名様</div>
                   </div>
                 </td>
-                <td class="hoverable sizeCost" value="12000" size="A4" @click="costChange(1,$event,costs,'A4');toast()">
+                <td class="hoverable size_people" @click="costChange('size_people','A4_1名',12000);"
+                  onclick="colorChange(this,'size_people')">
                   <div class="center price_middle">12,000</div>
                 </td>
-                <td class="hoverable sizeCost" value="16000" size="B4" @click="costChange(1,$event,costs,'B4');toast()">
+                <td class="hoverable size_people" @click="costChange('size_people','B4_1名',16000);"
+                  onclick="colorChange(this,'size_people')">
                   <div class="center price_middle">16,000</div>
                 </td>
-                <td class="hoverable sizeCost" value="20000" size="A3" @click="costChange(1,$event,costs,'A3');toast()">
+                <td class="hoverable size_people" @click="costChange('size_people','A3_1名',20000);"
+                  onclick="colorChange(this,'size_people')">
                   <div class="center price_middle">20,000</div>
                 </td>
-                <td class="hoverable sizeCost pc" value="24000" size="B3"
-                  @click="costChange(1,$event,costs,'B3');toast()">
+
+                <td class="hoverable size_people pc" @click="costChange('size_people','B3_1名',24000);"
+                  onclick="colorChange(this,'size_people')">
                   <div class="center price_middle">24,000</div>
                 </td>
               </tr>
@@ -589,7 +593,7 @@
               </tr>
               <tr>
                 <td style="visibility:hidden;"></td>
-                <td style="font-size:10px;">移行、1名増える毎に+2500円</td>
+                <td style="font-size:10px;">以降、1名増える毎に+2500円</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -616,7 +620,7 @@
             <li>・携帯の待ち受けサイズにしてプレゼント</li>
           </ul>
           <div class="costValue">
-            <h5 style="text-align:right">{{sizeCostValue}}</h5>
+            <h5 style="text-align:right">{{ welcome_list.size_people.cost }} 円</h5>
           </div>
           <div class="divider"></div>
         </div>
@@ -629,15 +633,16 @@
           </div>
           <div class="col s6">
             <div style="display:flex;">
-              <div class="hoverable backCost btn_select" value="2000" @click="costChange(2,$event,costs);toast()">有り
+              <div class="hoverable accessories btn_select" @click="costChange('accessories','有り',2000);"
+                onclick="colorChange(this,'accessories')">有り
               </div>
-              <div class="hoverable backCost btn_select myChoice" value="0" @click="costChange(2,$event,costs);toast()">
-                なし
+              <div class="hoverable accessories btn_select" @click="costChange('accessories','なし',0);"
+                onclick="colorChange(this,'accessories')">なし
               </div>
             </div>
           </div>
           <div class="col s6">
-            <h5 style="text-align:right">{{backCostValue}}</h5>
+            <h5 style="text-align:right">{{ welcome_list.accessories.cost }}円</h5>
           </div>
         </div>
 
@@ -650,13 +655,15 @@
           </div>
           <div class="col s6">
             <div style="display: flex;">
-              <div class="hoverable japCost btn_select" value="1000" @click="costChange(3,$event,costs);toast()">有り
+              <div class="hoverable japanese_pattern btn_select" @click="costChange('japanese_pattern','有り',1000);"
+                onclick="colorChange(this,'japanese_pattern')">有り
               </div>
-              <div class="hoverable japCost btn_select" value="0" @click="costChange(3,$event,costs);toast()">なし</div>
+              <div class="hoverable japanese_pattern btn_select" @click="costChange('japanese_pattern','なし',0);"
+                onclick="colorChange(this,'japanese_pattern')">なし</div>
             </div>
           </div>
           <div class="col s6">
-            <h5 style="text-align:right;">{{japCostValue}}</h5>
+            <h5 style="text-align:right;">{{welcome_list.japanese_pattern.cost}}円</h5>
           </div>
         </div>
 
@@ -668,16 +675,19 @@
           </div>
           <div class="col s6">
             <div style="display: flex;">
-              <div class="hoverable frameCost btn_select" id="frameEvent" value="99"
-                @click="costChange(4,$event,costs);toast()">
+              <div class="hoverable picture_frame btn_select" @click="costChange('picture_frame','有り',0)"
+                onclick="colorChange(this,'picture_frame')">
                 有り
               </div>
-              <div class="hoverable frameCost btn_select" value="0" @click="costChange(4,$event,costs);toast()">なし</div>
+              <div class="hoverable picture_frame btn_select" @click="costChange('picture_frame','なし',0)"
+                onclick="colorChange(this,'picture_frame')">
+                なし
+              </div>
 
             </div>
           </div>
           <div class="col s6">
-            <h5 style="text-align:right;">{{frameCostValue}}</h5>
+            <h5 style="text-align:right;">{{ welcome_list.picture_frame.cost }} 円</h5>
           </div>
         </div>
 
@@ -694,15 +704,24 @@
           </div>
           <div class="col s6">
             <div style="display:flex;">
-              <div class="hoverable lameCost btn_select" value="0" @click="costChange(0,$event,costs);toast()">ラメ無し
+              <div class="hoverable rame_add btn_select" @click="costChange('rame_add','多め',0)"
+                onclick="colorChange(this,'rame_add')">ラメ多め
               </div>
-              <div class="hoverable lameCost btn_select" value="0" @click="costChange(0,$event,costs);toast()">少なめ</div>
-              <div class="hoverable lameCost btn_select" value="0" @click="costChange(0,$event,costs);toast()">多め</div>
+              <div class="hoverable rame_add btn_select" @click="costChange('rame_add','少なめ',0)"
+                onclick="colorChange(this,'rame_add')">ラメ少なめ</div>
+              <div class="hoverable rame_add btn_select" @click="costChange('rame_add','なし',0)"
+                onclick="colorChange(this,'rame_add')">なし</div>
 
             </div>
           </div>
+
+          <div class="col s6">
+            <h5 style="text-align:right;">{{ welcome_list.rame_add.cost }} 円</h5>
+          </div>
         </div>
 
+
+        <div class="divider"></div>
         <div class="modal" id="modal_lame" style="z-index: 1007;">
           <div class="modal-content">
             <div class="col s12">
@@ -757,9 +776,6 @@
           </div>
         </div>
 
-        <div class="col s12" style="text-align:right;">
-          <h3>{{totalCostValue}}</h3>
-        </div>
       </div>
     </div>
 
@@ -776,11 +792,12 @@
         <form class="col s12 form_welcome">
 
           <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col s12 m6">
               <i class="material-icons prefix">account_circle</i>
               <input id="full_name" type="text" class="validate">
-              <label for=" full_name" class="form_welcome">お名前
+              <label for="full_name" class="form_welcome">お名前
                 <span class="new badge" data-badge-caption="">必須</span>
+
               </label>
             </div>
           </div>

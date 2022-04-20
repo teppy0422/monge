@@ -12,101 +12,128 @@ var options = {
 var app = new Vue({
   el: "#app",
   data: {
-    costs: [0, 0, 0, 0, 0, 0, 0, 0],
-    sizeCostValue: 0 + "円",
-    totalCostValue: 0 + "円",
-    backCostValue: 0 + "円",
-    japCostValue: 0 + "円",
-    frameCostValue: "",
+    welcome_list: {
+      size_people: {
+        select: "",
+        cost: 0,
+        over: false,
+      },
+      accessories: {
+        select: "",
+        cost: 0,
+        over: true,
+      },
+      japanese_pattern: {
+        select: "",
+        cost: 0,
+        over: true,
+      },
+      picture_frame: {
+        select: "",
+        cost: 0,
+        over: false,
+      },
+      rame_add: {
+        select: "",
+        cost: 0,
+        over: false,
+      },
+      picture_cost: {
+        cost: 0,
+      },
+    },
   },
   methods: {
-    costChange: function(selectType, event, costs) {
-      if (event.currentTarget.hasAttribute("size")) {
-        switch (event.currentTarget.getAttribute("size")) {
-          case "sikisi":
-            var cost = "500";
-            document.getElementById("frameText").innerText =
-              " 色紙(+" + cost + "円)";
-            break;
-          case "A4":
-            var cost = "1000";
-            document.getElementById("frameText").innerText =
-              " A4(+" + cost + "円)";
-            break;
-          case "B4":
-            var cost = "1500";
-            document.getElementById("frameText").innerText =
-              " B4(+" + cost + "円)";
-            break;
-          case "A3":
-            var cost = "2000";
-            document.getElementById("frameText").innerText =
-              " A3(+" + cost + "円)";
-            break;
-          case "B3":
-            var cost = "2500";
-            document.getElementById("frameText").innerText =
-              " B3(+" + cost + "円)";
-            break;
-        }
-        document.getElementById("frameEvent").setAttribute("value", cost);
-        if (this.frameCostValue != 0 + "円") {
-          this.frameCostValue = Number(cost).toLocaleString() + "円";
-          costs[4] = Number(cost);
-        }
-      }
-      var currentValue = event.currentTarget.getAttribute("value");
-      costs.forEach(function(elem, index) {
-        if (index == selectType) {
-          costs[index] = currentValue;
-        }
-      });
-      let totalCostTemp = 0;
-      costs.forEach(function(elem) {
-        totalCostTemp = totalCostTemp + parseInt(elem);
-      });
-      this.totalCostValue = Number(totalCostTemp).toLocaleString() + "円";
-      switch (selectType) {
-        case 1:
-          this.sizeCostValue = Number(currentValue).toLocaleString() + "円";
+    costChange: function(category, select, cost) {
+      //size_peopleが選択されたら額縁の値段を決める
+      switch (category) {
+        case "size_people":
+          var size = select.split("_");
+          console.log(size[0]);
+          switch (size[0]) {
+            case "色紙":
+              var frame_cost = "500";
+              break;
+            case "A4":
+              var frame_cost = "1000";
+              break;
+            case "B4":
+              var frame_cost = "1500";
+              break;
+            case "A3":
+              var frame_cost = "2000";
+              break;
+            case "B3":
+              var frame_cost = "2500";
+              break;
+          }
+          //金額の更新
+          this.welcome_list.size_people.cost = cost;
+          this.welcome_list.size_people.select = select;
+          //額縁の金額更新
+          this.welcome_list.picture_cost.cost = frame_cost;
+          if (this.welcome_list.picture_frame.select == "有り") {
+            this.welcome_list.picture_frame.cost = this.welcome_list.picture_cost.cost;
+          }
           break;
-        case 2:
-          this.backCostValue = Number(currentValue).toLocaleString() + "円";
+        case "accessories":
+          this.welcome_list.accessories.select = select;
+          this.welcome_list.accessories.cost = cost;
           break;
-        case 3:
-          this.japCostValue = Number(currentValue).toLocaleString() + "円";
+        case "japanese_pattern":
+          this.welcome_list.japanese_pattern.select = select;
+          this.welcome_list.japanese_pattern.cost = cost;
           break;
-        case 4:
-          this.frameCostValue = Number(currentValue).toLocaleString() + "円";
+        case "picture_frame":
+          this.welcome_list.picture_frame.select = select;
+          if (select == "有り") {
+            this.welcome_list.picture_frame.cost = this.welcome_list.picture_cost.cost;
+          } else {
+            this.welcome_list.picture_frame.cost = 0;
+          }
+          break;
+        case "rame_add":
+          this.welcome_list.rame_add.select = select;
+          this.welcome_list.rame_add.cost = cost;
           break;
       }
     },
-    toast: function() {
-      const toast = document.getElementById("toast");
-      toast.style.visibility = "visible";
-      toast.animate(
-        [
-          { transform: window.pageYOffset + "px" },
-          { transform: "translateY(0px)" },
-        ],
-        { duration: 500 }
-      );
-      console.log(toast.style.top);
-      toast.style.top = window.pageYOffset + "px";
-      console.log(toast.style.top);
-      console.log(window.pageYOffset);
-      console.log(window.screenY);
+    // toast: function() {
+    //   const toast = document.getElementById("toast");
+    //   toast.style.visibility = "visible";
+    //   toast.animate(
+    //     [
+    //       { transform: window.pageYOffset + "px" },
+    //       { transform: "translateY(0px)" },
+    //     ],
+    //     { duration: 500 }
+    //   );
+    //   console.log(toast.style.top);
+    //   toast.style.top = window.pageYOffset + "px";
+    //   console.log(toast.style.top);
+    //   console.log(window.pageYOffset);
+    //   console.log(window.screenY);
 
-      if (timer != false) {
-        clearTimeout(timer);
-      }
-      timer = setTimeout(function() {
-        timer = false;
-        toast.style.visibility = "hidden";
-      }, 2000);
-    },
+    //   if (timer != false) {
+    //     clearTimeout(timer);
+    //   }
+    //   timer = setTimeout(function() {
+    //     timer = false;
+    //     toast.style.visibility = "hidden";
+    //   }, 2000);
+    // },
   },
 });
+
+function colorChange(obj, className) {
+  // 同じクラスの色を消す
+  var eles = document.getElementsByClassName(className);
+  for (var i = 0; i < eles.length; i++) {
+    eles[i].classList.remove("myChoice");
+  }
+  // 色を塗る
+  obj.classList.add("myChoice");
+}
 
 //金額計算
 var comicomiFlag = false;
@@ -134,19 +161,6 @@ function comicomiChange() {
       comis[i].classList.add("myChoice");
     }
   }, 1000);
-}
-// 同じグループの自分以外のクラスを外す
-function removeElseChoice(nowSelect, targetClass) {
-  var nowSize = nowSelect.getAttribute("size");
-  for (var i = 0; i < targetClass.length; i++) {
-    var targetSize = targetClass[i].getAttribute("size");
-    if (
-      targetClass[i].innerText + targetSize !=
-      nowSelect.innerText + nowSize
-    ) {
-      targetClass[i].classList.remove("myChoice");
-    }
-  }
 }
 var backCost = document.getElementsByClassName("backCost");
 var backCostValue = document.getElementById("backCostValue");
