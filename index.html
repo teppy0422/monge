@@ -30,7 +30,8 @@
   <title>もんげ絵</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Yusei+Magic&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="./css/aos.css">
   <link rel="stylesheet" href="./css/style2.css" type="text/css" media="screen">
@@ -79,13 +80,15 @@
       <div class="center">
 
         <div class="swiper">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" style="position: relative;">
             <div class="swiper-slide"><img src="img/slider31.jpg" style="width:100%;"></div>
             <div class="swiper-slide"><img src="img/slider32.jpg" style="width:100%;"></div>
             <div class="swiper-slide"><img src="img/slider33.jpg" style="width:100%;"></div>
             <div class="swiper-slide"><img src="img/slider34.jpg" style="width:100%;"></div>
           </div>
-
+          <div class="welcome_overlay"></div>
+          <h2 class="welcome_message">
+            大切なあの人に<br>たった1つの贈り物</h2>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
           <div class="swiper-pagination"></div>
@@ -110,7 +113,7 @@
               ウェルカムボード、お祝い似顔絵、カップル似顔絵等受付中♪<br>
               現物とデータ納品（無料）できます＊<br>
             </p>
-            <p class="grey-text text-for-phone">
+            <p class="center-align text-for-phone">
               もうすぐ春ですね<br>
               体調には十分気を付けて過ごしましょう(..◜ᴗ◝..)<br>
               ウェルカムボード、お祝い似顔絵、カップル似顔絵等受付中♪<br>
@@ -673,7 +676,7 @@
         <div class="row" style="margin-bottom:0px;">
           <div class="divider"></div>
           <div class="col s12">
-            <h5>3.額縁<span id="frameText" style="font-size:16px;"> (+0円)</span></h5>
+            <h5>3.額縁<span id="frameText" style="font-size:16px;">(+{{ welcome_list.picture_cost.cost }}円)</span></h5>
             <p>色紙の場合はミニイーゼルになります</p>
           </div>
           <div class="col s6">
