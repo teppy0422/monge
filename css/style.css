@@ -1163,25 +1163,35 @@ form.form_welcome .row:last-child {
 
 @-webkit-keyframes welcome_message {
   0% {
-    top: 120%;
+  }
+  70% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
   }
   90% {
-    top: 120%;
+    opacity: 1;
   }
   100% {
-    top: 50%;
+    opacity: 0;
   }
 }
 
 @keyframes welcome_message {
   0% {
-    top: 120%;
+  }
+  70% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
   }
   90% {
-    top: 120%;
+    opacity: 1;
   }
   100% {
-    top: 50%;
+    opacity: 0;
   }
 }
 
@@ -1207,11 +1217,14 @@ form.form_welcome .row:last-child {
     font-size: 2em;
   }
   90% {
-    opacity: 0;
+    opacity: 0.2;
     font-size: 2em;
   }
-  100% {
+  99% {
     opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
     font-size: 1em;
   }
 }
@@ -1222,11 +1235,14 @@ form.form_welcome .row:last-child {
     font-size: 2em;
   }
   90% {
-    opacity: 0;
+    opacity: 0.2;
     font-size: 2em;
   }
-  100% {
+  99% {
     opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
     font-size: 1em;
   }
 }
