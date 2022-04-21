@@ -750,6 +750,8 @@ Result Skip Results iframe EDIT ON .light-theme {
 
 .dark-theme {
   background-image: url(../img/bg_patt_dark.png) !important;
+  background-repeat: repeat;
+  background-attachment: fixed !important;
   background: var(--black);
   color: var(--white);
   transition: 1s;
