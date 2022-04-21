@@ -1148,29 +1148,30 @@ form.form_welcome .row:last-child {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
-  vertical-align: middle;
   justify-items: center;
   z-index: 10;
   text-shadow: 5px 5px 2px #000;
   font-weight: 700;
-  -webkit-animation: welcome_message 8s linear;
-          animation: welcome_message 8s linear;
+  -webkit-animation: welcome_message 12s linear;
+          animation: welcome_message 12s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   font-family: "Yusei Magic", sans-serif;
   line-height: 1.5em;
+  display: block;
 }
 
 @-webkit-keyframes welcome_message {
   0% {
-  }
-  70% {
     opacity: 0;
   }
-  75% {
+  50% {
+    opacity: 0;
+  }
+  65% {
     opacity: 1;
   }
-  90% {
+  95% {
     opacity: 1;
   }
   100% {
@@ -1180,14 +1181,15 @@ form.form_welcome .row:last-child {
 
 @keyframes welcome_message {
   0% {
-  }
-  70% {
     opacity: 0;
   }
-  75% {
+  50% {
+    opacity: 0;
+  }
+  65% {
     opacity: 1;
   }
-  90% {
+  95% {
     opacity: 1;
   }
   100% {
@@ -1205,45 +1207,46 @@ form.form_welcome .row:last-child {
   background-color: #000;
   opacity: 0.5;
   z-index: 5;
-  -webkit-animation: welcome_overlay 8s linear;
-          animation: welcome_overlay 8s linear;
+  -webkit-animation: welcome_overlay 12s linear;
+          animation: welcome_overlay 12s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  display: block;
 }
 
 @-webkit-keyframes welcome_overlay {
   0% {
     opacity: 0;
-    font-size: 2em;
   }
-  90% {
-    opacity: 0.2;
-    font-size: 2em;
+  50% {
+    opacity: 0;
   }
-  99% {
-    opacity: 0.2;
+  65% {
+    opacity: 0.3;
+  }
+  95% {
+    opacity: 0.3;
   }
   100% {
     opacity: 0;
-    font-size: 1em;
   }
 }
 
 @keyframes welcome_overlay {
   0% {
     opacity: 0;
-    font-size: 2em;
   }
-  90% {
-    opacity: 0.2;
-    font-size: 2em;
+  50% {
+    opacity: 0;
   }
-  99% {
-    opacity: 0.2;
+  65% {
+    opacity: 0.3;
+  }
+  95% {
+    opacity: 0.3;
   }
   100% {
     opacity: 0;
-    font-size: 1em;
   }
 }
 /*# sourceMappingURL=style.css.map */

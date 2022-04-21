@@ -295,3 +295,19 @@ function btnModeDown(obj, obj_icon) {
     }, 500);
   }
 }
+//ウェルカムボードのキャッチコピー用
+window.addEventListener("load", function() {
+  // メッセージ
+  let welcome_message = document.getElementById("welcome_message");
+  welcome_message.classList.add("welcome_message");
+  window.setTimeout(() => {
+    welcome_message.classList.remove("welcome_message");
+  }, 13000);
+
+  //オーバーレイ
+  let welcome_overlay = document.getElementById("welcome_overlay");
+  welcome_overlay.classList.add("welcome_overlay");
+  setTimeout(() => {
+    welcome_overlay.classList.remove("welcome_overlay");
+  }, 13000);
+});
