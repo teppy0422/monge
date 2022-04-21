@@ -5,7 +5,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
@@ -769,23 +770,6 @@ p {
   }
 }
 
-#toast {
-  /* visibility: hidden; */
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  right: 0px;
-}
-
-#toast a {
-  color: #fff;
-  font-size: 14px;
-  vertical-align: center;
-  letter-spacing: 0;
-}
-
 /* 横スクロール */
 .area {
   overflow: hidden;
@@ -821,29 +805,26 @@ p {
   --purple: #805ad5;
   --yellow: #e3cc38;
   --blue: #00aaff;
+  --pink: #f20dc8;
 }
 
 /* darkmode */
 Result Skip Results iframe EDIT ON .light-theme {
   background: var(--white);
   color: var(--black);
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 Result Skip Results iframe EDIT ON .light-theme #btnMode {
   background: var(--purple);
   color: var(--white);
-  -webkit-transition: all 1s;
-  transition: all 1s;
 }
 
 .dark-theme {
   background-image: url(../img/bg_patt_dark.png) !important;
   background: var(--black);
   color: var(--white);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .dark-theme a {
@@ -857,8 +838,8 @@ Result Skip Results iframe EDIT ON .light-theme #btnMode {
 .dark-theme #btnMode {
   background: #f6ad55;
   color: var(--black);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .dark-theme .section:nth-child(2n) {
@@ -890,6 +871,93 @@ Result Skip Results iframe EDIT ON .light-theme #btnMode {
 #btnMode {
   background: var(--purple);
   color: var(--white);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#btnMode:active {
+  border-color: var(--pink);
+}
+
+.btnModeFake {
+  -webkit-animation: btnModeClick 0.5s linear;
+          animation: btnModeClick 0.5s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes btnModeClick {
+  0% {
+  }
+  5% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  10% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  30% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  51% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    opacity: 0.5;
+  }
+  80% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes btnModeClick {
+  0% {
+  }
+  5% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  10% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  30% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  51% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    opacity: 0.5;
+  }
+  80% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    top: 0;
+  }
 }
 
 .eshi_detail img {
@@ -1008,9 +1076,62 @@ form.form_welcome .row:last-child {
   padding: 8px 16px;
   border-radius: 5px;
   white-space: nowrap;
+  text-align: center;
+  justify-items: center;
 }
 
 .btn_select:hover {
   cursor: pointer;
+}
+
+.toast {
+  margin: 0px;
+  width: 7em;
+  height: 64px;
+  right: 1px;
+  top: 0;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  border: 1px solid #000;
+  -webkit-animation: myToast 2s linear;
+          animation: myToast 2s linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  white-space: nowrap;
+  font-size: 18px;
+}
+
+@-webkit-keyframes myToast {
+  0% {
+    top: 30vh;
+    opacity: 0;
+  }
+  10% {
+    top: 5vh;
+    opacity: 0.6;
+  }
+  25% {
+    top: 0vh;
+    opacity: 1;
+  }
+}
+
+@keyframes myToast {
+  0% {
+    top: 30vh;
+    opacity: 0;
+  }
+  10% {
+    top: 5vh;
+    opacity: 0.6;
+  }
+  25% {
+    top: 0vh;
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

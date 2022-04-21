@@ -4,7 +4,8 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 a,
@@ -707,23 +708,6 @@ p {
   }
 }
 
-#toast {
-  /* visibility: hidden; */
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  right: 0px;
-}
-
-#toast a {
-  color: #fff;
-  font-size: 14px;
-  vertical-align: center;
-  letter-spacing: 0;
-}
-
 /* 横スクロール */
 .area {
   overflow: hidden;
@@ -751,17 +735,16 @@ p {
   --purple: #805ad5;
   --yellow: #e3cc38;
   --blue: #00aaff;
+  --pink: #f20dc8;
 }
 
 /* darkmode */
 Result Skip Results iframe EDIT ON .light-theme {
   background: var(--white);
   color: var(--black);
-  transition: all 1s;
   #btnMode {
     background: var(--purple);
     color: var(--white);
-    transition: all 1s;
   }
 }
 
@@ -769,7 +752,7 @@ Result Skip Results iframe EDIT ON .light-theme {
   background-image: url(../img/bg_patt_dark.png) !important;
   background: var(--black);
   color: var(--white);
-  transition: all 1s;
+  transition: 1s;
   a {
     color: pink;
   }
@@ -779,7 +762,7 @@ Result Skip Results iframe EDIT ON .light-theme {
   #btnMode {
     background: #f6ad55;
     color: var(--black);
-    transition: all 1s;
+    transition: 1s;
   }
   .section:nth-child(2n) {
     background-color: #333;
@@ -806,6 +789,45 @@ Result Skip Results iframe EDIT ON .light-theme {
 #btnMode {
   background: var(--purple);
   color: var(--white);
+  transition: 1s;
+  &:active {
+    border-color: var(--pink);
+  }
+}
+.btnModeFake {
+  animation: btnModeClick 0.5s linear;
+  animation-fill-mode: forwards;
+  // position: absolute;
+}
+@keyframes btnModeClick {
+  0% {
+  }
+  5% {
+    transform: translateX(5px);
+  }
+  10% {
+    transform: translateX(-5px);
+  }
+  30% {
+    transform: translateX(0px);
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  50% {
+    // opacity: 0;
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(-100px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateY(20px);
+  }
+  100% {
+    top: 0;
+  }
 }
 .eshi_detail {
   img {
@@ -907,7 +929,41 @@ form.form_welcome {
   padding: 8px 16px;
   border-radius: 5px;
   white-space: nowrap;
+  text-align: center;
+  justify-items: center;
   &:hover {
     cursor: pointer;
+  }
+}
+
+.toast {
+  margin: 0px;
+  width: 7em;
+  height: 64px;
+  right: 1px;
+  top: 0;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  border: 1px solid #000;
+  animation: myToast 2s linear;
+  animation-fill-mode: forwards;
+  white-space: nowrap;
+  font-size: 18px;
+}
+
+@keyframes myToast {
+  0% {
+    top: 30vh;
+    opacity: 0;
+  }
+  10% {
+    top: 5vh;
+    opacity: 0.6;
+  }
+  25% {
+    top: 0vh;
+    opacity: 1;
   }
 }

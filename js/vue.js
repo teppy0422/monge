@@ -19,17 +19,17 @@ var app = new Vue({
         over: false,
       },
       accessories: {
-        select: "",
+        select: "なし",
         cost: 0,
         over: true,
       },
       japanese_pattern: {
-        select: "",
+        select: "なし",
         cost: 0,
         over: true,
       },
       picture_frame: {
-        select: "",
+        select: "なし",
         cost: 0,
         over: false,
       },
@@ -41,6 +41,12 @@ var app = new Vue({
       picture_cost: {
         cost: 0,
       },
+      illustrator: {
+        select: "おまかせ/納期優先",
+        cost: 0,
+        over: false,
+      },
+      total_cost: 0,
     },
   },
   methods: {
@@ -52,19 +58,19 @@ var app = new Vue({
           console.log(size[0]);
           switch (size[0]) {
             case "色紙":
-              var frame_cost = "500";
+              var frame_cost = 500;
               break;
             case "A4":
-              var frame_cost = "1000";
+              var frame_cost = 1000;
               break;
             case "B4":
-              var frame_cost = "1500";
+              var frame_cost = 1500;
               break;
             case "A3":
-              var frame_cost = "2000";
+              var frame_cost = 2000;
               break;
             case "B3":
-              var frame_cost = "2500";
+              var frame_cost = 2500;
               break;
           }
           //金額の更新
@@ -75,6 +81,7 @@ var app = new Vue({
           if (this.welcome_list.picture_frame.select == "有り") {
             this.welcome_list.picture_frame.cost = this.welcome_list.picture_cost.cost;
           }
+          comicomiChange();
           break;
         case "accessories":
           this.welcome_list.accessories.select = select;
@@ -96,33 +103,21 @@ var app = new Vue({
           this.welcome_list.rame_add.select = select;
           this.welcome_list.rame_add.cost = cost;
           break;
+        case "illustrator":
+          this.welcome_list.illustrator.select = select;
+          this.welcome_list.illustrator.cost = cost;
+          break;
       }
+      this.welcome_list.total_cost =
+        this.welcome_list.size_people.cost +
+        this.welcome_list.accessories.cost +
+        this.welcome_list.japanese_pattern.cost +
+        this.welcome_list.picture_frame.cost +
+        this.welcome_list.rame_add.cost;
+      toast_create(this.welcome_list.total_cost);
     },
-    // toast: function() {
-    //   const toast = document.getElementById("toast");
-    //   toast.style.visibility = "visible";
-    //   toast.animate(
-    //     [
-    //       { transform: window.pageYOffset + "px" },
-    //       { transform: "translateY(0px)" },
-    //     ],
-    //     { duration: 500 }
-    //   );
-    //   console.log(toast.style.top);
-    //   toast.style.top = window.pageYOffset + "px";
-    //   console.log(toast.style.top);
-    //   console.log(window.pageYOffset);
-    //   console.log(window.screenY);
-
-    //   if (timer != false) {
-    //     clearTimeout(timer);
-    //   }
-    //   timer = setTimeout(function() {
-    //     timer = false;
-    //     toast.style.visibility = "hidden";
-    //   }, 2000);
-    // },
   },
+  computed: {},
 });
 
 function colorChange(obj, className) {
@@ -135,19 +130,6 @@ function colorChange(obj, className) {
   obj.classList.add("myChoice");
 }
 
-//金額計算
-var comicomiFlag = false;
-var sizeCost = document.getElementsByClassName("sizeCost");
-for (var i = 0; i < sizeCost.length; i++) {
-  sizeCost[i].addEventListener("click", function() {
-    this.classList.add("myChoice"); //色を塗る
-    removeElseChoice(this, sizeCost); //他の色を消す
-    if (comicomiFlag == false) {
-      comicomiChange();
-      comicomiFlag == true;
-    }
-  });
-}
 //コミコミのアニメーション
 function comicomiChange() {
   var comis = document.getElementsByClassName("comi");
@@ -160,34 +142,21 @@ function comicomiChange() {
       // comis[i].classList.remove("pulse");
       comis[i].classList.add("myChoice");
     }
-  }, 1000);
+  }, 500);
 }
-var backCost = document.getElementsByClassName("backCost");
-var backCostValue = document.getElementById("backCostValue");
-for (var i = 0; i < backCost.length; i++) {
-  backCost[i].addEventListener("click", function() {
-    this.classList.add("myChoice"); //色を塗る
-    removeElseChoice(this, backCost); //他の色を消す
-  });
-}
-var lameCost = document.getElementsByClassName("lameCost");
-for (var i = 0; i < lameCost.length; i++) {
-  lameCost[i].addEventListener("click", function() {
-    this.classList.add("myChoice"); //色を塗る
-    removeElseChoice(this, lameCost); //他の色を消す
-  });
-}
-var japCost = document.getElementsByClassName("japCost");
-for (var i = 0; i < japCost.length; i++) {
-  japCost[i].addEventListener("click", function() {
-    this.classList.add("myChoice"); //色を塗る
-    removeElseChoice(this, japCost); //他の色を消す
-  });
-}
-var frameCost = document.getElementsByClassName("frameCost");
-for (var i = 0; i < frameCost.length; i++) {
-  frameCost[i].addEventListener("click", function() {
-    this.classList.add("myChoice"); //色を塗る
-    removeElseChoice(this, frameCost); //他の色を消す
-  });
-}
+// トースト
+let toasts = document.querySelector("#toasts");
+let count = 0;
+toast_create = (totalcost) => {
+  let toast = document.createElement("div");
+  toast.className = "toast myChoice";
+  toast.innerHTML = totalcost + "円";
+
+  // トーストを作成
+  toasts.appendChild(toast);
+  // 2秒後にトーストを消す
+  setTimeout(() => {
+    toast.remove();
+  }, 2000);
+  count++;
+};

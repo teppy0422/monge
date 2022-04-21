@@ -221,20 +221,27 @@ window.addEventListener("load", function() {
 });
 
 // darkmode
-var flagMode = false;
+let flagMode = false;
+let is_btnModeDown = false;
 function changeMode(obj) {
-  if (flagMode == false) {
-    // ダークモード
-    document.body.classList.remove("light-theme");
-    document.body.classList.add("dark-theme");
-    obj.innerHTML = '<i class="material-icons">wb_sunny</i>';
-    flagMode = true;
-  } else {
-    // ライトモード
-    document.body.classList.remove("dark-theme");
-    document.body.classList.add("light-theme");
-    obj.innerHTML = '<i class="material-icons">brightness_2</i>';
-    flagMode = false;
+  if (is_btnModeDown == false) {
+    if (flagMode == false) {
+      // ダークモード
+      document.body.classList.remove("light-theme");
+      document.body.classList.add("dark-theme");
+
+      btnModeDown(obj, '<i class="material-icons">wb_sunny</i>');
+
+      flagMode = true;
+    } else {
+      // ライトモード
+      document.body.classList.remove("dark-theme");
+      document.body.classList.add("light-theme");
+
+      btnModeDown(obj, '<i class="material-icons">brightness_2</i>');
+
+      flagMode = false;
+    }
   }
 }
 // 編集中の項目までのリンク
@@ -250,8 +257,8 @@ function changeColor(hoge) {
   }
 }
 
+// ラメのキラキラ
 let snows = document.querySelector(".stars");
-
 const createStar = () => {
   let snow = document.createElement("span");
   snow.className = "star";
@@ -272,5 +279,19 @@ const createStar = () => {
     snow.remove();
   }, 10000);
 };
-
 setInterval(createStar, 1000);
+
+//ダークモード切り替えのアニメーション用
+function btnModeDown(obj, obj_icon) {
+  if (is_btnModeDown == false) {
+    is_btnModeDown = true;
+    obj.classList.add("btnModeFake");
+    setTimeout(() => {
+      obj.classList.remove("btnModeFake");
+      is_btnModeDown = false;
+    }, 1000);
+    setTimeout(() => {
+      obj.innerHTML = obj_icon;
+    }, 500);
+  }
+}

@@ -6,15 +6,16 @@
         <section class="pc col" style="display: flex;">
           <img src="./img/logo.png" style="height:4em;float:left;margin-right:10px;">
           <div class="neu_menu">
+            <div onclick="changeMode(this)" class="neu" id="btnMode"><i class="material-icons">brightness_2</i></div>
+
             <div onclick="load_html('welcome.html#vue_cost','#main','menu_01');" class="neu" id="menu_01">
               ウェルカムボード</div>
             <div class="neu">似顔絵単体</div>
             <div class="neu">名刺</div>
             <div onclick="load_html('sns_icon.html#','#main','menu_04')" class="neu" id="menu_04">SNS</div>
 
-            <div onclick="changeMode(this)" class="neu" id="btnMode"><i class="material-icons">brightness_2</i></div>
-            <div onclick="move_temp('temp')" class="neu" style="color:#000;"> Temp</div>
-            <div onclick="load_html('sns_icon.html#','#main','menu_04')" class="neu" id="menu_04">SNS</div>
+            <div onclick="move_temp('temp')" class="neu" style="color:var(--pink);"> Temp</div>
+            <div onclick="toast_create(200000)" class="neu">toast</div>
             <div onclick="load_html('sns_icon.html#','#main','menu_04')" class="neu" id="menu_04">SNS</div>
             <div onclick="load_html('sns_icon.html#','#main','menu_04')" class="neu" id="menu_04">SNS</div>
             <div onclick="load_html('sns_icon.html#','#main','menu_04')" class="neu" id="menu_04">SNS</div>
