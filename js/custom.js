@@ -302,12 +302,14 @@ window.addEventListener("load", function() {
   welcome_message.classList.add("welcome_message");
   window.setTimeout(() => {
     welcome_message.classList.remove("welcome_message");
-  }, 13000);
+    welcome_message.style.display = "none";
+  }, 12000);
 
   //オーバーレイ
   let welcome_overlay = document.getElementById("welcome_overlay");
   welcome_overlay.classList.add("welcome_overlay");
   setTimeout(() => {
     welcome_overlay.classList.remove("welcome_overlay");
-  }, 13000);
+    welcome_overlay.style.display = "none";
+  }, 12000);
 });
