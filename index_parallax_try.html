@@ -67,28 +67,27 @@
     <div class="container" style="width:100%;">
       <div class="center">
 
-        <div class="swiper" style="position:relative">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/slider31.jpg" style="width:100%;"></div>
-            <div class="swiper-slide"><img src="img/slider32.jpg" style="width:100%;"></div>
-            <div class="swiper-slide"><img src="img/slider33.jpg" style="width:100%;"></div>
-            <div class="swiper-slide"><img src="img/slider34.jpg" style="width:100%;"></div>
+        <div id="luxy">
+          <div class="swiper luxy-el" data-speed-y="10">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/slider31.jpg" style="width:100%;"></div>
+              <div class="swiper-slide"><img src="img/slider32.jpg" style="width:100%;"></div>
+              <div class="swiper-slide"><img src="img/slider33.jpg" style="width:100%;"></div>
+              <div class="swiper-slide"><img src="img/slider34.jpg" style="width:100%;"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
+          <div id="welcome_overlay"></div>
+          <h2 id="welcome_message">
+            大切なあの人に<br>たった1つの贈り物</h2>
         </div>
-
-        <div id="welcome_overlay"></div>
-        <h2 id="welcome_message">
-          大切なあの人に<br>たった1つの贈り物</h2>
-
-
 
       </div>
     </div>
 
-    <div id="about-this-site" class="section valign-wrapper">
+    <div id="about-this-site" class="section valign-wrapper" style="top:800px;">
       <div class="container" style="width:80%">
         <h2 class="center grey-text text-darken-3"></h2>
         <div class="row center">
@@ -208,7 +207,7 @@
                         <div class="modal-content box10" style="background-image: url(./img/bg_patt_akiyo11.png);">
                           <img src="./img/akiyo/main11.png" alt="" class="responsive-img z-depth-2"
                             style="margin-bottom: 5px;">
-                          <p style="margin-bottom: 0.5em;line-height: 1.4em;margin-bottom: 0px;" class="form_welcome">
+                          <p style="margin-bottom: 0.5em;line-height: 1.4em;margin-bottom: 0px;">
                             B4サイズ<br>2名様<br>追加費用なし<br>20,000円(税込)
                           </p>
                         </div>
@@ -220,7 +219,7 @@
                         <div class="modal-content box10" style="background-image: url(./img/bg_patt_akiyo12.png);">
                           <img src="./img/akiyo/main12.jpg" alt="" class="responsive-img z-depth-2"
                             style="margin-bottom: 5px;">
-                          <p style="margin-bottom: 0.5em;line-height: 1.4em;margin-bottom: 0px;" class="form_welcome">
+                          <p style="margin-bottom: 0.5em;line-height: 1.4em;margin-bottom: 0px;">
                             B4サイズ<br>2名様<br>追加費用なし<br>20,000円(税込)
                           </p>
                         </div>
@@ -234,7 +233,7 @@
                         <div class="modal-content box10" style="background-image: url(./img/bg_patt_akiyo10.png);">
                           <img src="./img/akiyo/main09.png" alt="" class="responsive-img z-depth-2"
                             style="margin-bottom: 5px;">
-                          <p style="margin-bottom: 0.5em;line-height: 1.4em;margin-bottom: 0px;" class="form_welcome">
+                          <p style="margin-bottom: 0.5em;line-height: 1.4em;margin-bottom: 0px;">
                             A4サイズ<br>2名様<br>追加費用なし<br>15,000円(税込)
                           </p>
                         </div>
@@ -246,7 +245,7 @@
                         <div class="modal-content box10" style="background-image: url(./img/bg_patt_akiyo08.png);">
                           <img src="./img/akiyo/main08.png" alt="" class="responsive-img z-depth-2"
                             style="margin-bottom: 5px;">
-                          <p style="margin-bottom: 0.5em;line-height: 1.4em;margin-bottom: 0px;" class="form_welcome">
+                          <p style="margin-bottom: 0.5em;line-height: 1.4em;margin-bottom: 0px;">
                             A3サイズ<br>2名様+わんちゃん<br>オプション+5,000円<br>30,000円(税込)
                           </p>
                         </div>
@@ -273,7 +272,7 @@
           <div class="modal" id="modal_yuuka" style="z-index: 1015;">
             <div class="modal-content">
               <div class="col s12">
-                <h4 class="center-align form_welcome"><span>まだ作ってないよ</span></h4>
+                <h4 class="center-align"><span>まだ作ってないよ</span></h4>
                 <p>
 
                 </p>
@@ -299,7 +298,7 @@
                     <img src="img/insta_akiyo.jpg" alt="Contact Person">
                     あきよ
                   </div>
-                  <p class="form_welcome">なんかインスタっぽいコメント</p>
+                  <p>なんかインスタっぽいコメント</p>
                 </div>
               </div>
             </div>
@@ -318,7 +317,7 @@
                 <div class="col s12 m3 offset+m1 offset+l1">
                   <img src="img/h2_title_akiyo.png" style="width:100%">
                   <p class="center-align project-title grey-text text-darken-3"></p>
-                  <p class="form_welcome">なんかインスタっぽいコメント</p>
+                  <p>なんかインスタっぽいコメント</p>
                 </div>
               </div>
             </div>
@@ -337,7 +336,7 @@
                 <div class="col s12 m3 offset+m1 offset+l1">
                   <img src="img/h2_title_akiyo.png" style="width:100%">
                   <p class="center-align project-title grey-text text-darken-3"></p>
-                  <p class="form_welcome">なんかインスタっぽいコメント</p>
+                  <p>なんかインスタっぽいコメント</p>
                 </div>
               </div>
             </div>
@@ -356,7 +355,7 @@
                 <div class="col s12 m3 offset+m1 offset+l1">
                   <img src="img/h2_title_akiyo.png" style="width:100%">
                   <p class="center-align project-title grey-text text-darken-3"></p>
-                  <p class="form_welcome">なんかインスタっぽいコメント</p>
+                  <p>なんかインスタっぽいコメント</p>
                 </div>
               </div>
             </div>
@@ -373,17 +372,17 @@
         <div class=" row center">
           <div class="col s12 m10 offset-m1">
             <div>
-              <div class="pc">
+              <selection class="pc">
                 <img class="materialboxed" src="./img/price01.png" style="width:100%;">
                 <img class="materialboxed" src="./img/price02.png" style="width:100%;">
-              </div>
-              <div class="sp">
+              </selection>
+              <selection class="sp">
                 <img src="./img/price11.png" style="width:100%;">
                 <img src="./img/price12.png" style="width:100%;">
                 <a href="./img/price.pdf" target="_blank">
                   <img src="./img/more_pdf.png" style="width:100%;" alt="他のサイズもございます。料金表はこちら。">
                 </a>
-              </div>
+              </selection>
             </div>
           </div>
         </div>
@@ -719,34 +718,33 @@
         <div class="modal" id="modal_lame" style="z-index: 1007;">
           <div class="modal-content">
             <div class="col s12">
-              <h4 class="form_welcome">ラメについて</h4>
-              <p class="form_welcome">文字や似顔絵のフチにキラキラしたラメが入ります☆角度によって輝きます♪</p>
-              <div class="pc">
+              <h4>ラメについて</h4>
+              <p>文字や似顔絵のフチにキラキラしたラメが入ります☆角度によって輝きます♪</p>
+              <selection class="pc">
                 <img src="./img/image01.png" alt="" class="responsive-img z-depth-2">
-              </div>
-              <div class="sp">
+              </selection>
+              <selection class="sp">
                 <img src="./img/image11.png" alt="" class="responsive-img z-depth-2">
-              </div>
+              </selection>
             </div>
             <div class="row center">
               <div class="col s12 m6 l3">
                 <img src="./img/sample01.png" alt="" class="materialboxed responsive-img z-depth-2">
-                <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>文字も少し立体感が出ます。</p>
+                <p><i class="material-icons" style="color:pink;">turned_in</i>文字も少し立体感が出ます。</p>
               </div>
               <div class="col s12 m6 l3">
                 <img src="./img/sample02.png" alt="" class="materialboxed responsive-img z-depth-2">
-                <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>「寿」の文字も少し豪華に<i
-                    class="material-icons" style="color:#424242;">music_note</i></p>
+                <p><i class="material-icons" style="color:pink;">turned_in</i>「寿」の文字も少し豪華に<i class="material-icons"
+                    style="color:#424242;">music_note</i></p>
               </div>
               <div class="col s12 m6 l3">
                 <img src="./img/sample03.png" alt="" class="materialboxed responsive-img z-depth-2">
-                <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>海の中のキラキラ感もラメで表現します
-                </p>
+                <p><i class="material-icons" style="color:pink;">turned_in</i>海の中のキラキラ感もラメで表現します</p>
               </div>
               <div class="col s12 m6 l3">
                 <img src="./img/sample04.png" alt="" class="materialboxed responsive-img z-depth-2">
-                <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>細い文字にもラメを塗る事ができます<i
-                    class="material-icons" style="color:#424242;">music_note</i></p>
+                <p><i class="material-icons" style="color:pink;">turned_in</i>細い文字にもラメを塗る事ができます<i class="material-icons"
+                    style="color:#424242;">music_note</i></p>
               </div>
             </div>
             <div class="row center">
@@ -763,7 +761,7 @@
                 <p>サンプル動画1</p>
               </div>
             </div>
-            <p class="center form_welcome" id="lame_usagi">ラメを塗る場所や量に関しては、ふたごにお任せいただいておりますが<br>
+            <p class="center" id="lame_usagi">ラメを塗る場所や量に関しては、ふたごにお任せいただいておりますが<br>
               多めがいい/少なめがいい / ラメ不要 などご希望がある場合は予めお気軽にお知らせくださいませ。</p>
           </div>
           <div class="modal-footer">
@@ -899,10 +897,10 @@
             </form>
           </div>
           <div class="center">
-            <a class="waves-effect waves-light btn-large" style="color:#fff" id="send_Doc"><i
-                class="material-icons right" style="margin-left: 0.5em;;">send</i>送信</a><br>
-            <img src="./img/more.png" alt="" class="dark_target"
-              style="margin-top:20px;filter: drop-shadow(3px 3px 3px #fff);">
+            <a class="waves-effect waves-light btn-large" style="color:#fff"><i class="material-icons right"
+                style="margin-left: 0.5em;;">send</i>送信</a><br>
+            <img src="./img/more.png" alt="" class="" style="margin-top:20px;filter: drop-shadow(3px 3px 6px #fff);
+            ">
           </div>
         </form>
       </div>
@@ -913,22 +911,22 @@
     <div class="container">
       <div class="row center">
         <h2 class="header col s12 light">ここに直接の連絡先</h2>
-      </div>
-    </div>
-  </div>
-
-  <pre style="line-height: 1.5em;">
+        <pre style="line-height: 1.5em;">
           フォーム送信
           ご注文の流れの文字位置
           ボタンのアクションの見直し
           resize
+          キャッチコピーの追加
           _______
           フォントと配色
-          キャッチコピーの表現
           _______
           SEO
           スマホの場合はLINE IDを取得(URL移動後)
-  </pre>
+        </pre>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer-section led-color-of-footer valign-wrapper">
     <div class="scroll-to-top-btn">
       <a href="https://teppy.link/example/monge/#" class="waves-effect waves-light led-color-of-btn"><i
@@ -951,10 +949,8 @@
   <!-- スクロール -->
   <script src="./js/gsap.min.js"></script>
   <script src="./js/ScrollTrigger.min.js"></script>
-  <!-- メール送信 -->
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script src="./js/smtpjs_script.js"></script>
-
+  <!-- parallax -->
+  <script type="text/javascript" src="./js/luxy.js.polyfills.min.js" charset="utf-8"></script>
   <!-- Vue -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="./js/vue.js"></script>
@@ -972,6 +968,11 @@
       let vh = window.innerHeight * 1;
       vh = vh - 64;
 
+      luxy.init({
+        wrapper: '#luxy',
+        targets: '.luxy-el',
+        wrapperSpeed: 0.08
+      });
     }
     // html読み込み
     function load_html(_url, _id, _me) {

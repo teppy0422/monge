@@ -117,11 +117,11 @@ $(".thumbnails img").click(function() {
 });
 
 // materialize.jsのセレクトボックス用
-$(function() {
-  $(document).ready(function() {
-    $("select").material_select();
-  });
-});
+// $(function() {
+//   $(document).ready(function() {
+//     $("select").material_select();
+//   });
+// });
 document.addEventListener("DOMContentLoaded", function() {
   var elems = document.querySelectorAll("select");
   var instances = M.FormSelect.init(elems, options);
