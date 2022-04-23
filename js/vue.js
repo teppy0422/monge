@@ -116,6 +116,52 @@ var app = new Vue({
         this.welcome_list.rame_add.cost;
       toast_create(this.welcome_list.total_cost);
     },
+    send_message: function() {
+      console.log("send_mail");
+      var size_people_select = this.welcome_list.size_people.select.split("_");
+      const email = document.getElementById("email").value;
+      const name = document.getElementById("full_name").value;
+      const line_id = document.getElementById("line_id").value;
+      const icon_prefix2 = document.getElementById("icon_prefix2").value;
+      const text =
+        "依頼者：" +
+        name +
+        " 様<br>" +
+        "メールアドレス: " +
+        email +
+        "<br>" +
+        "LINE ID: " +
+        line_id +
+        "<br>" +
+        "問い合わせ内容: " +
+        icon_prefix2 +
+        "<br><br>" +
+        "--選択内容--<br>" +
+        "人数: " +
+        size_people_select[1] +
+        "<br>" +
+        "サイズ: " +
+        size_people_select[0] +
+        "<br>" +
+        "小物: " +
+        this.welcome_list.accessories.select +
+        "<br>" +
+        "和柄: " +
+        this.welcome_list.japanese_pattern.select +
+        "<br>" +
+        "額縁: " +
+        this.welcome_list.picture_frame.select +
+        "<br>" +
+        "ラメ: " +
+        this.welcome_list.rame_add.select +
+        "<br>" +
+        "絵師: " +
+        this.welcome_list.illustrator.select +
+        "<br>" +
+        "総額: " +
+        this.welcome_list.total_cost;
+      sendDoc(email, text);
+    },
   },
   computed: {},
 });
@@ -159,4 +205,13 @@ toast_create = (totalcost) => {
     toast.remove();
   }, 2000);
   count++;
+};
+const sendDoc = (email, text) => {
+  Email.send({
+    SecureToken: "bd9151f0-18c1-43ca-b131-7016fc6e8096",
+    To: email,
+    From: "teppy@aol.jp",
+    Subject: "注文依頼:もんげ絵",
+    Body: text,
+  }).then((message) => alert(message));
 };

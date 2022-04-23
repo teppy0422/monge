@@ -480,377 +480,379 @@
     </div>
   </div>
 
-  <div id="app" class="section valign-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col s12" style="padding:0px">
-          <h3 class="center aos-init" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000"
-            style="margin-top:0em;">簡単なお見積もり</h3>
+  <div id="app">
+    <div class="section valign-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col s12" style="padding:0px">
+            <h3 class="center aos-init" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000"
+              style="margin-top:0em;">簡単なお見積もり</h3>
 
-          <div class="aos-init pc" data-aos-once="false" data-aos="fade-up" data-aos-duration="1000"
-            data-aos-offset="800" style="height:4em">
-            <img src="./img/price_chan.png" style="width:100%;position:absolute;z-index: 999;bottom:-3px">
-          </div>
-          <div class="aos-init sp" data-aos-once="false" data-aos="fade-up" data-aos-duration="1000"
-            data-aos-offset="200" style="height:4em">
-            <img src="./img/price_chan.png" style="width:100%;position:absolute;z-index: 999;bottom:-1px">
-          </div>
-
-
-          <table class=" centered osare-table" style="z-index: 100;">
-            <thead>
-              <tr>
-                <th class="table_side" style="padding:0 !important;">
-                  <div>サイズ</div>
-                  <div>人数</div>
-                </th>
-                <th>色紙</th>
-                <th style="margin:0px;padding:0px;">A4</th>
-                <th>B4</th>
-                <th>A3</th>
-                <th class="pc">B3</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td>1人</td>
-                <td class="hoverable size_people" @click="costChange('size_people','色紙_1名',9000);"
-                  onclick="colorChange(this,'size_people');">
-                  <div class="center price_top order_tip pc_vi">1名様プレゼントにおすすめ
-                  </div>
-                  <div class="center price_middle">9,000</div>
-                  <div style="display:flex;text-align:center;justify-content: center;">
-                    <div class="center price_bottom pc" style="font-size:11px;">色紙サイズ</div>
-                    <div class="center price_bottom" style="font-size:11px;">1名様</div>
-                  </div>
-                </td>
-                <td class="hoverable size_people" @click="costChange('size_people','A4_1名',12000);"
-                  onclick="colorChange(this,'size_people')">
-                  <div class="center price_middle">12,000</div>
-                </td>
-                <td class="hoverable size_people" @click="costChange('size_people','B4_1名',16000);"
-                  onclick="colorChange(this,'size_people')">
-                  <div class="center price_middle">16,000</div>
-                </td>
-                <td class="hoverable size_people" @click="costChange('size_people','A3_1名',20000);"
-                  onclick="colorChange(this,'size_people')">
-                  <div class="center price_middle">20,000</div>
-                </td>
-
-                <td class="hoverable size_people pc" @click="costChange('size_people','B3_1名',24000);"
-                  onclick="colorChange(this,'size_people')">
-                  <div class="center price_middle">24,000</div>
-                </td>
-              </tr>
-              <tr>
-                <td>2人</td>
-                <td class="hoverable size_people" @click="costChange('size_people','色紙_2名',11500);"
-                  onclick="colorChange(this,'size_people')">
-                  <div class="center price_top order_tip pc_vi">カップル ご夫婦におすすめ</div>
-                  <div class="center price_middle">11,500</div>
-                  <div style="display:flex;text-align:center;justify-content: center;">
-                    <div class="center price_bottom pc"
-                      style="font-size:13px;background-color: #FC87A8;font-style: bold;">
-                      色紙サイズ</div>
-                    <div class="center price_bottom" style="font-size:13px;background-color: #FC87A8;">2名様</div>
-                  </div>
-                </td>
-                <td class="hoverable size_people" @click="costChange('size_people','A4_2名',15000);"
-                  onclick="colorChange(this,'size_people')">
-                  <div class="center price_middle">15,000</div>
-                </td>
-                <td class="hoverable size_people" @click="costChange('size_people','B4_2名',20000);"
-                  onclick="colorChange(this,'size_people')">
-                  <div class="center price_middle">20,000</div>
-                </td>
-                <td class="hoverable size_people" @click="costChange('size_people','A3_2名',25000);"
-                  onclick="colorChange(this,'size_people')">
-                  <div class="center price_top order_tip pc_vi">ウエルカムボードにおすすめ</div>
-                  <div class="center price_middle">25,000</div>
-                  <div style="display:flex;text-align:center;justify-content: center;">
-                    <div class="center price_bottom pc"
-                      style="font-size:13px;background-color: #FC87A8;font-style: bold;">
-                      A3サイズ</div>
-                    <div class="center price_bottom" style="font-size:13px;background-color: #FC87A8;">2名様</div>
-                  </div>
-                </td>
-                <td class="hoverable size_people pc" @click="costChange('size_people','B3_2名',30000);"
-                  onclick="colorChange(this,'size_people')">
-                  <div class="center price_middle">30,000</div>
-                </td>
-              </tr>
-              <tr>
-                <td class="hoverable">Jonat</td>
-                <td class="hoverable">Lolli</td>
-                <td class="hoverable">$7.00</td>
-                <td class="hoverable">Lolli</td>
-                <td class="hoverable">$7.00</td>
-                <td class="hoverable pc">Lolli</td>
-              </tr>
-              <tr>
-                <td style="visibility:hidden;"></td>
-                <td style="font-size:10px;">以降、1名増える毎に+2500円</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="pc"></td>
-
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="anim-box poyoyon3"></div>
-          <div>
-            <div class="comicomi">
-              <p class="comi">税込み</p>
-              <p class="comi">送料込み</p>
-              <p class="comi">ラメ込み</p>
-              <p class="comi">筆文字ミニ色紙</p>
+            <div class="aos-init pc" data-aos-once="false" data-aos="fade-up" data-aos-duration="1000"
+              data-aos-offset="800" style="height:4em">
+              <img src="./img/price_chan.png" style="width:100%;position:absolute;z-index: 999;bottom:-3px">
             </div>
-            <div class="comicomi">
-              <p class="comi">お名前入れ無料</p>
-              <p class="comi">メッセージ入れ無料</p>
+            <div class="aos-init sp" data-aos-once="false" data-aos="fade-up" data-aos-duration="1000"
+              data-aos-offset="200" style="height:4em">
+              <img src="./img/price_chan.png" style="width:100%;position:absolute;z-index: 999;bottom:-1px">
+            </div>
+
+
+            <table class=" centered osare-table" style="z-index: 100;">
+              <thead>
+                <tr>
+                  <th class="table_side" style="padding:0 !important;">
+                    <div>サイズ</div>
+                    <div>人数</div>
+                  </th>
+                  <th>色紙</th>
+                  <th style="margin:0px;padding:0px;">A4</th>
+                  <th>B4</th>
+                  <th>A3</th>
+                  <th class="pc">B3</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>1人</td>
+                  <td class="hoverable size_people" @click="costChange('size_people','色紙_1名',9000);"
+                    onclick="colorChange(this,'size_people');">
+                    <div class="center price_top order_tip pc_vi">1名様プレゼントにおすすめ
+                    </div>
+                    <div class="center price_middle">9,000</div>
+                    <div style="display:flex;text-align:center;justify-content: center;">
+                      <div class="center price_bottom pc" style="font-size:11px;">色紙サイズ</div>
+                      <div class="center price_bottom" style="font-size:11px;">1名様</div>
+                    </div>
+                  </td>
+                  <td class="hoverable size_people" @click="costChange('size_people','A4_1名',12000);"
+                    onclick="colorChange(this,'size_people')">
+                    <div class="center price_middle">12,000</div>
+                  </td>
+                  <td class="hoverable size_people" @click="costChange('size_people','B4_1名',16000);"
+                    onclick="colorChange(this,'size_people')">
+                    <div class="center price_middle">16,000</div>
+                  </td>
+                  <td class="hoverable size_people" @click="costChange('size_people','A3_1名',20000);"
+                    onclick="colorChange(this,'size_people')">
+                    <div class="center price_middle">20,000</div>
+                  </td>
+
+                  <td class="hoverable size_people pc" @click="costChange('size_people','B3_1名',24000);"
+                    onclick="colorChange(this,'size_people')">
+                    <div class="center price_middle">24,000</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2人</td>
+                  <td class="hoverable size_people" @click="costChange('size_people','色紙_2名',11500);"
+                    onclick="colorChange(this,'size_people')">
+                    <div class="center price_top order_tip pc_vi">カップル ご夫婦におすすめ</div>
+                    <div class="center price_middle">11,500</div>
+                    <div style="display:flex;text-align:center;justify-content: center;">
+                      <div class="center price_bottom pc"
+                        style="font-size:13px;background-color: #FC87A8;font-style: bold;">
+                        色紙サイズ</div>
+                      <div class="center price_bottom" style="font-size:13px;background-color: #FC87A8;">2名様</div>
+                    </div>
+                  </td>
+                  <td class="hoverable size_people" @click="costChange('size_people','A4_2名',15000);"
+                    onclick="colorChange(this,'size_people')">
+                    <div class="center price_middle">15,000</div>
+                  </td>
+                  <td class="hoverable size_people" @click="costChange('size_people','B4_2名',20000);"
+                    onclick="colorChange(this,'size_people')">
+                    <div class="center price_middle">20,000</div>
+                  </td>
+                  <td class="hoverable size_people" @click="costChange('size_people','A3_2名',25000);"
+                    onclick="colorChange(this,'size_people')">
+                    <div class="center price_top order_tip pc_vi">ウエルカムボードにおすすめ</div>
+                    <div class="center price_middle">25,000</div>
+                    <div style="display:flex;text-align:center;justify-content: center;">
+                      <div class="center price_bottom pc"
+                        style="font-size:13px;background-color: #FC87A8;font-style: bold;">
+                        A3サイズ</div>
+                      <div class="center price_bottom" style="font-size:13px;background-color: #FC87A8;">2名様</div>
+                    </div>
+                  </td>
+                  <td class="hoverable size_people pc" @click="costChange('size_people','B3_2名',30000);"
+                    onclick="colorChange(this,'size_people')">
+                    <div class="center price_middle">30,000</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="hoverable">Jonat</td>
+                  <td class="hoverable">Lolli</td>
+                  <td class="hoverable">$7.00</td>
+                  <td class="hoverable">Lolli</td>
+                  <td class="hoverable">$7.00</td>
+                  <td class="hoverable pc">Lolli</td>
+                </tr>
+                <tr>
+                  <td style="visibility:hidden;"></td>
+                  <td style="font-size:10px;">以降、1名増える毎に+2500円</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td class="pc"></td>
+
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="anim-box poyoyon3"></div>
+            <div>
+              <div class="comicomi">
+                <p class="comi">税込み</p>
+                <p class="comi">送料込み</p>
+                <p class="comi">ラメ込み</p>
+                <p class="comi">筆文字ミニ色紙</p>
+              </div>
+              <div class="comicomi">
+                <p class="comi">お名前入れ無料</p>
+                <p class="comi">メッセージ入れ無料</p>
+              </div>
+            </div>
+            <ul>
+              <li>・携帯の待ち受けサイズにしてプレゼント</li>
+            </ul>
+            <div class="costValue">
+              <h5 style="text-align:right">{{ welcome_list.size_people.cost }}円</h5>
+            </div>
+            <div class="divider"></div>
+          </div>
+
+          <div class="row" style="margin-bottom: 0px;">
+            <a class="btn" data-position="bottom" style="display: inline;line-height:0" id="temp">オプション</a>
+            <div class="col s12">
+              <h5>1.小物<span style="font-size:16px;"> (+2000円〜)</span></h5>
+              <p>小物・複雑な背景・車など</p>
+            </div>
+            <div class="col s6">
+              <div style="display:flex;">
+                <div class="hoverable accessories btn_select" @click="costChange('accessories','有り',2000);"
+                  onclick="colorChange(this,'accessories')">有り
+                </div>
+                <div class="hoverable accessories btn_select myChoice" @click="costChange('accessories','なし',0);"
+                  onclick="colorChange(this,'accessories')">なし
+                </div>
+              </div>
+            </div>
+            <div class="col s6">
+              <h5 style="text-align:right">{{ welcome_list.accessories.cost }}円</h5>
             </div>
           </div>
-          <ul>
-            <li>・携帯の待ち受けサイズにしてプレゼント</li>
-          </ul>
-          <div class="costValue">
-            <h5 style="text-align:right">{{ welcome_list.size_people.cost }}円</h5>
+
+          <div class="row" style="margin-bottom: 0px;">
+            <div class="divider"></div>
+            <div class="col s12">
+              <h5>2.和柄<span style="font-size:16px;"> (+1000円〜)</span></h5>
+              <p>時間を要する和柄など<br>
+                ※白無垢は料金内(無料)です</p>
+            </div>
+            <div class="col s6">
+              <div style="display: flex;">
+                <div class="hoverable japanese_pattern btn_select" @click="costChange('japanese_pattern','有り',1000);"
+                  onclick="colorChange(this,'japanese_pattern')">有り
+                </div>
+                <div class="hoverable japanese_pattern btn_select myChoice"
+                  @click="costChange('japanese_pattern','なし',0);" onclick="colorChange(this,'japanese_pattern')">なし
+                </div>
+              </div>
+            </div>
+            <div class="col s6">
+              <h5 style="text-align:right;">{{welcome_list.japanese_pattern.cost}}円</h5>
+            </div>
           </div>
+
+          <div class="row" style="margin-bottom:0px;">
+            <div class="divider"></div>
+            <div class="col s12">
+              <h5>3.額縁<span id="frameText" style="font-size:16px;">(+{{ welcome_list.picture_cost.cost }}円)</span></h5>
+              <p>色紙の場合はミニイーゼルになります</p>
+            </div>
+            <div class="col s6">
+              <div style="display: flex;">
+                <div class="hoverable picture_frame btn_select" @click="costChange('picture_frame','有り',0)"
+                  onclick="colorChange(this,'picture_frame')">
+                  有り
+                </div>
+                <div class="hoverable picture_frame btn_select myChoice" @click="costChange('picture_frame','なし',0)"
+                  onclick="colorChange(this,'picture_frame')">
+                  なし
+                </div>
+
+              </div>
+            </div>
+            <div class="col s6">
+              <h5 style="text-align:right;">{{ welcome_list.picture_frame.cost }}円</h5>
+            </div>
+          </div>
+
+          <div class="row" style="margin-bottom: 0px;">
+            <div class="divider"></div>
+            <a class="btn" data-position="bottom" style="display:inline;line-height: 0;">無料のオプション</a>
+            <div class="col s12">
+              <h5>1.ラメを付ける
+                <a class="stars btn waves-effect waves-light modal-trigger" href="#modal_lame">
+                  <span style="vertical-align: middle;z-index: 3;">詳しく見る</span>
+                  <div class="star"></div>
+                </a>
+              </h5>
+            </div>
+            <div class="row" style="margin-bottom:0">
+              <div class="col s12 m6" style="display:flex;">
+                <div class="hoverable rame_add btn_select" @click="costChange('rame_add','多め',0)"
+                  onclick="colorChange(this,'rame_add')">ラメ多め
+                </div>
+                <div class="hoverable rame_add btn_select" @click="costChange('rame_add','少なめ',0)"
+                  onclick="colorChange(this,'rame_add')">ラメ少なめ</div>
+                <div class="hoverable rame_add btn_select" @click="costChange('rame_add','なし',0)"
+                  onclick="colorChange(this,'rame_add')">なし</div>
+              </div>
+              <div class="col s12 m6">
+                <h5 style="text-align:right;">{{ welcome_list.rame_add.cost }}円</h5>
+              </div>
+            </div>
+          </div>
+
           <div class="divider"></div>
-        </div>
-
-        <div class="row" style="margin-bottom: 0px;">
-          <a class="btn" data-position="bottom" style="display: inline;line-height:0" id="temp">オプション</a>
-          <div class="col s12">
-            <h5>1.小物<span style="font-size:16px;"> (+2000円〜)</span></h5>
-            <p>小物・複雑な背景・車など</p>
-          </div>
-          <div class="col s6">
-            <div style="display:flex;">
-              <div class="hoverable accessories btn_select" @click="costChange('accessories','有り',2000);"
-                onclick="colorChange(this,'accessories')">有り
+          <div class="modal" id="modal_lame" style="z-index: 1007;">
+            <div class="modal-content">
+              <div class="col s12">
+                <h4 class="form_welcome">ラメについて</h4>
+                <p class="form_welcome">文字や似顔絵のフチにキラキラしたラメが入ります☆角度によって輝きます♪</p>
+                <div class="pc">
+                  <img src="./img/image01.png" alt="" class="responsive-img z-depth-2">
+                </div>
+                <div class="sp">
+                  <img src="./img/image11.png" alt="" class="responsive-img z-depth-2">
+                </div>
               </div>
-              <div class="hoverable accessories btn_select myChoice" @click="costChange('accessories','なし',0);"
-                onclick="colorChange(this,'accessories')">なし
+              <div class="row center">
+                <div class="col s12 m6 l3">
+                  <img src="./img/sample01.png" alt="" class="materialboxed responsive-img z-depth-2">
+                  <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>文字も少し立体感が出ます。</p>
+                </div>
+                <div class="col s12 m6 l3">
+                  <img src="./img/sample02.png" alt="" class="materialboxed responsive-img z-depth-2">
+                  <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>「寿」の文字も少し豪華に<i
+                      class="material-icons" style="color:#424242;">music_note</i></p>
+                </div>
+                <div class="col s12 m6 l3">
+                  <img src="./img/sample03.png" alt="" class="materialboxed responsive-img z-depth-2">
+                  <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>海の中のキラキラ感もラメで表現します
+                  </p>
+                </div>
+                <div class="col s12 m6 l3">
+                  <img src="./img/sample04.png" alt="" class="materialboxed responsive-img z-depth-2">
+                  <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>細い文字にもラメを塗る事ができます<i
+                      class="material-icons" style="color:#424242;">music_note</i></p>
+                </div>
+              </div>
+              <div class="row center">
+                <div class="col s12 m6 center">
+                  <video class="responsive-video" playsinline autoplay muted loop>
+                    <source src="./movie/lame01.mp4" type="video/mp4">
+                  </video>
+                  <p>サンプル動画1</p>
+                </div>
+                <div class="col s12 m6 center">
+                  <video class="responsive-video" playsinline autoplay muted loop>
+                    <source src="./movie/lame02.mp4" type="video/mp4">
+                  </video>
+                  <p>サンプル動画1</p>
+                </div>
+              </div>
+              <p class="center form_welcome" id="lame_usagi">ラメを塗る場所や量に関しては、ふたごにお任せいただいておりますが<br>
+                多めがいい/少なめがいい / ラメ不要 などご希望がある場合は予めお気軽にお知らせくださいませ。</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+          </div>
+
+          <div class="col s12">
+            <h5>2.絵師 </h5>
+          </div>
+          <div class="row" style="margin-bottom: 0px;">
+            <div class="col s3 m3 l2" style="margin:0;padding:0;">
+              <div class="hoverable illustrator btn_select" @click="costChange('illustrator','あきよ',0)"
+                onclick="colorChange(this,'illustrator')" style="padding:8px 0px;">●あきよ</div>
+            </div>
+            <div class="col s3 m3 l2" style="margin:0;padding:0;">
+              <div class="hoverable illustrator btn_select" @click="costChange('illustrator','ゆうか',0)"
+                onclick="colorChange(this,'illustrator')" style="padding:8px 0px;">●ゆうか</div>
+            </div>
+            <div class="col s6 m4 l2" style="margin:0;padding:0;">
+              <div class="hoverable illustrator btn_select myChoice" @click="costChange('illustrator','おまかせ',0)"
+                onclick="colorChange(this,'illustrator')" style="padding:8px 0px;">おまかせ/納期優先
               </div>
             </div>
           </div>
-          <div class="col s6">
-            <h5 style="text-align:right">{{ welcome_list.accessories.cost }}円</h5>
-          </div>
-        </div>
 
-        <div class="row" style="margin-bottom: 0px;">
-          <div class="divider"></div>
-          <div class="col s12">
-            <h5>2.和柄<span style="font-size:16px;"> (+1000円〜)</span></h5>
-            <p>時間を要する和柄など<br>
-              ※白無垢は料金内(無料)です</p>
-          </div>
-          <div class="col s6">
-            <div style="display: flex;">
-              <div class="hoverable japanese_pattern btn_select" @click="costChange('japanese_pattern','有り',1000);"
-                onclick="colorChange(this,'japanese_pattern')">有り
-              </div>
-              <div class="hoverable japanese_pattern btn_select myChoice"
-                @click="costChange('japanese_pattern','なし',0);" onclick="colorChange(this,'japanese_pattern')">なし</div>
-            </div>
-          </div>
-          <div class="col s6">
-            <h5 style="text-align:right;">{{welcome_list.japanese_pattern.cost}}円</h5>
-          </div>
-        </div>
-
-        <div class="row" style="margin-bottom:0px;">
-          <div class="divider"></div>
-          <div class="col s12">
-            <h5>3.額縁<span id="frameText" style="font-size:16px;">(+{{ welcome_list.picture_cost.cost }}円)</span></h5>
-            <p>色紙の場合はミニイーゼルになります</p>
-          </div>
-          <div class="col s6">
-            <div style="display: flex;">
-              <div class="hoverable picture_frame btn_select" @click="costChange('picture_frame','有り',0)"
-                onclick="colorChange(this,'picture_frame')">
-                有り
-              </div>
-              <div class="hoverable picture_frame btn_select myChoice" @click="costChange('picture_frame','なし',0)"
-                onclick="colorChange(this,'picture_frame')">
-                なし
-              </div>
-
-            </div>
-          </div>
-          <div class="col s6">
-            <h5 style="text-align:right;">{{ welcome_list.picture_frame.cost }}円</h5>
-          </div>
-        </div>
-
-        <div class="row" style="margin-bottom: 0px;">
-          <div class="divider"></div>
-          <a class="btn" data-position="bottom" style="display:inline;line-height: 0;">無料のオプション</a>
-          <div class="col s12">
-            <h5>1.ラメを付ける
-              <a class="stars btn waves-effect waves-light modal-trigger" href="#modal_lame">
-                <span style="vertical-align: middle;z-index: 3;">詳しく見る</span>
-                <div class="star"></div>
+          <div class="row">
+            <div class="col s3 m3 l2" style="margin:0;padding:0;">
+              <a class="stars btn waves-effect waves-light modal-trigger" href="#modal_akiyo">
+                <span style="vertical-align: middle;z-index: 3;">絵を見る</span>
               </a>
-            </h5>
-          </div>
-          <div class="row" style="margin-bottom:0">
-            <div class="col s12 m6" style="display:flex;">
-              <div class="hoverable rame_add btn_select" @click="costChange('rame_add','多め',0)"
-                onclick="colorChange(this,'rame_add')">ラメ多め
-              </div>
-              <div class="hoverable rame_add btn_select" @click="costChange('rame_add','少なめ',0)"
-                onclick="colorChange(this,'rame_add')">ラメ少なめ</div>
-              <div class="hoverable rame_add btn_select" @click="costChange('rame_add','なし',0)"
-                onclick="colorChange(this,'rame_add')">なし</div>
             </div>
-            <div class="col s12 m6">
+            <div class="col s3 m3 l2" style="margin:0;padding:0;">
+              <a class="stars btn waves-effect waves-light modal-trigger" href="#modal_yuuka">
+                <span style="vertical-align: middle;z-index: 3;">絵を見る</span>
+              </a>
+            </div>
+            <div class="col s6 m4 l2" style="margin:0;padding:0;"></div>
+          </div>
+          <div class="row">
+            <div class="col s12">
               <h5 style="text-align:right;">{{ welcome_list.rame_add.cost }}円</h5>
             </div>
           </div>
-        </div>
+          <div class="divider"></div>
 
-        <div class="divider"></div>
-        <div class="modal" id="modal_lame" style="z-index: 1007;">
-          <div class="modal-content">
-            <div class="col s12">
-              <h4 class="form_welcome">ラメについて</h4>
-              <p class="form_welcome">文字や似顔絵のフチにキラキラしたラメが入ります☆角度によって輝きます♪</p>
-              <div class="pc">
-                <img src="./img/image01.png" alt="" class="responsive-img z-depth-2">
-              </div>
-              <div class="sp">
-                <img src="./img/image11.png" alt="" class="responsive-img z-depth-2">
-              </div>
-            </div>
-            <div class="row center">
-              <div class="col s12 m6 l3">
-                <img src="./img/sample01.png" alt="" class="materialboxed responsive-img z-depth-2">
-                <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>文字も少し立体感が出ます。</p>
-              </div>
-              <div class="col s12 m6 l3">
-                <img src="./img/sample02.png" alt="" class="materialboxed responsive-img z-depth-2">
-                <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>「寿」の文字も少し豪華に<i
-                    class="material-icons" style="color:#424242;">music_note</i></p>
-              </div>
-              <div class="col s12 m6 l3">
-                <img src="./img/sample03.png" alt="" class="materialboxed responsive-img z-depth-2">
-                <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>海の中のキラキラ感もラメで表現します
-                </p>
-              </div>
-              <div class="col s12 m6 l3">
-                <img src="./img/sample04.png" alt="" class="materialboxed responsive-img z-depth-2">
-                <p class="form_welcome"><i class="material-icons" style="color:pink;">turned_in</i>細い文字にもラメを塗る事ができます<i
-                    class="material-icons" style="color:#424242;">music_note</i></p>
-              </div>
-            </div>
-            <div class="row center">
-              <div class="col s12 m6 center">
-                <video class="responsive-video" playsinline autoplay muted loop>
-                  <source src="./movie/lame01.mp4" type="video/mp4">
-                </video>
-                <p>サンプル動画1</p>
-              </div>
-              <div class="col s12 m6 center">
-                <video class="responsive-video" playsinline autoplay muted loop>
-                  <source src="./movie/lame02.mp4" type="video/mp4">
-                </video>
-                <p>サンプル動画1</p>
-              </div>
-            </div>
-            <p class="center form_welcome" id="lame_usagi">ラメを塗る場所や量に関しては、ふたごにお任せいただいておりますが<br>
-              多めがいい/少なめがいい / ラメ不要 などご希望がある場合は予めお気軽にお知らせくださいませ。</p>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-          </div>
-        </div>
-
-        <div class="col s12">
-          <h5>2.絵師 </h5>
-        </div>
-        <div class="row" style="margin-bottom: 0px;">
-          <div class="col s3 m3 l2" style="margin:0;padding:0;">
-            <div class="hoverable illustrator btn_select" @click="costChange('illustrator','あきよ',0)"
-              onclick="colorChange(this,'illustrator')" style="padding:8px 0px;">●あきよ</div>
-          </div>
-          <div class="col s3 m3 l2" style="margin:0;padding:0;">
-            <div class="hoverable illustrator btn_select" @click="costChange('illustrator','ゆうか',0)"
-              onclick="colorChange(this,'illustrator')" style="padding:8px 0px;">●ゆうか</div>
-          </div>
-          <div class="col s6 m4 l2" style="margin:0;padding:0;">
-            <div class="hoverable illustrator btn_select myChoice" @click="costChange('illustrator','おまかせ',0)"
-              onclick="colorChange(this,'illustrator')" style="padding:8px 0px;">おまかせ/納期優先
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col s3 m3 l2" style="margin:0;padding:0;">
-            <a class="stars btn waves-effect waves-light modal-trigger" href="#modal_akiyo">
-              <span style="vertical-align: middle;z-index: 3;">絵を見る</span>
-            </a>
-          </div>
-          <div class="col s3 m3 l2" style="margin:0;padding:0;">
-            <a class="stars btn waves-effect waves-light modal-trigger" href="#modal_yuuka">
-              <span style="vertical-align: middle;z-index: 3;">絵を見る</span>
-            </a>
-          </div>
-          <div class="col s6 m4 l2" style="margin:0;padding:0;"></div>
-        </div>
-        <div class="row">
           <div class="col s12">
-            <h5 style="text-align:right;">{{ welcome_list.rame_add.cost }}円</h5>
+            <h3 style="text-align:right;">{{ welcome_list.total_cost }} 円(税込)</h3>
           </div>
-        </div>
-        <div class="divider"></div>
 
-        <div class="col s12">
-          <h3 style="text-align:right;">{{ welcome_list.total_cost }} 円(税込)</h3>
         </div>
-
+      </div>
+      <div id="toasts">
       </div>
     </div>
-    <div id="toasts">
-    </div>
-  </div>
 
 
-  <div id="estimate" class="section valign-wrapper">
-    <div class="container">
-      <h3 class="center aos-init" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">ご注文</h3>
-      <img src="./img/order_title.png" style="width:100%;">
-      <div class="row">
-        <form class="col s12 form_welcome">
+    <div id="estimate" class="section valign-wrapper">
+      <div class="container">
+        <h3 class="center aos-init" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">ご注文</h3>
+        <img src="./img/order_title.png" style="width:100%;">
+        <div class="row">
+          <form class="col s12 form_welcome">
 
-          <div class="row">
-            <div class="input-field col s12 m6">
-              <i class="material-icons prefix">account_circle</i>
-              <input id="full_name" type="text" class="validate">
-              <label for="full_name" class="form_welcome">お名前
-                <span class="new badge" data-badge-caption="">必須</span>
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="full_name" type="text" class="validate">
+                <label for="full_name" class="form_welcome">お名前
+                  <span class="new badge" data-badge-caption="">必須</span>
 
-              </label>
+                </label>
+              </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="material-icons prefix">email</i>
-              <input id="email" type="email" class="validate">
-              <label for="email" class="form_welcome">メールアドレス
-                <span class="new badge" data-badge-caption="">必須</span>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" class="validate">
+                <label for="email" class="form_welcome">メールアドレス
+                  <span class="new badge" data-badge-caption="">必須</span>
 
-              </label>
+                </label>
+              </div>
             </div>
-          </div>
 
-          <!-- <div class="row">
+            <!-- <div class="row">
             <div class="input-field col s12 m6">
               <i class="material-icons prefix">person_add</i>
               <input id="personAdd" type="number" class="validate input_text" value="1" min="1" max="99">
@@ -870,9 +872,9 @@
             </div>
           </div> -->
 
-          <div class="row">
+            <div class="row">
 
-            <!-- <div class="input-field col s12 m6">
+              <!-- <div class="input-field col s12 m6">
               <i class="material-icons prefix">color_lens</i>
               <select onchange="changeColor(this)">
                 <option value="おまかせ/納期優先" selected>おまかせ/納期優先</option>
@@ -882,29 +884,30 @@
               <label class="form_welcome">希望絵師</label>
             </div> -->
 
-            <div class="input-field col s6">
-              <i class="material-icons prefix ">phone_iphone</i>
-              <input id="line_id" type="text" class="validate input_text">
-              <label for="line_id" class="form_welcome">LINE ID</label>
-            </div>
-          </div>
-
-          <div class="row">
-            <form class="col s12">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">mode_edit</i>
-                <textarea id="icon_prefix2" class="materialize-textarea input_text" data-length="120"></textarea>
-                <label for="icon_prefix2" class="form_welcome">お問い合わせ内容</label>
+              <div class="input-field col s6">
+                <i class="material-icons prefix ">phone_iphone</i>
+                <input id="line_id" type="text" class="validate input_text">
+                <label for="line_id" class="form_welcome">LINE ID</label>
               </div>
-            </form>
-          </div>
-          <div class="center">
-            <a class="waves-effect waves-light btn-large" style="color:#fff" id="send_Doc"><i
-                class="material-icons right" style="margin-left: 0.5em;;">send</i>送信</a><br>
-            <img src="./img/more.png" alt="" class="dark_target"
-              style="margin-top:20px;filter: drop-shadow(3px 3px 3px #fff);">
-          </div>
-        </form>
+            </div>
+
+            <div class="row">
+              <form class="col s12">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">mode_edit</i>
+                  <textarea id="icon_prefix2" class="materialize-textarea input_text" data-length="120"></textarea>
+                  <label for="icon_prefix2" class="form_welcome">お問い合わせ内容</label>
+                </div>
+              </form>
+            </div>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" style="color:#fff" @click="send_message();"><i
+                  class="material-icons right" style="margin-left: 0.5em;;">send</i>送信</a><br>
+              <img src="./img/more.png" alt="" class="dark_target"
+                style="margin-top:20px;filter: drop-shadow(3px 3px 3px #fff);">
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -919,6 +922,8 @@
 
   <pre style="line-height: 1.5em;">
           フォーム送信
+          >送信ボタンを押した後のメッセージ追加
+          〜の表示
           ご注文の流れの文字位置
           ボタンのアクションの見直し
           resize
