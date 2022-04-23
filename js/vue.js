@@ -133,7 +133,7 @@ var app = new Vue({
         "LINE ID: " +
         line_id +
         "<br>" +
-        "問い合わせ内容: " +
+        "問い合わせ内容:<br>" +
         icon_prefix2 +
         "<br><br>" +
         "--選択内容--<br>" +
@@ -205,13 +205,4 @@ toast_create = (totalcost) => {
     toast.remove();
   }, 2000);
   count++;
-};
-const sendDoc = (email, text) => {
-  Email.send({
-    SecureToken: "bd9151f0-18c1-43ca-b131-7016fc6e8096",
-    To: email,
-    From: "teppy@aol.jp",
-    Subject: "注文依頼:もんげ絵",
-    Body: text,
-  }).then((message) => alert(message));
 };
