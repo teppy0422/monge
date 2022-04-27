@@ -123,14 +123,16 @@ var app = new Vue({
       const email = document.getElementById("email").value;
       const name = document.getElementById("full_name").value;
       const line_id = document.getElementById("line_id").value;
-      const icon_prefix2 = document.getElementById("icon_prefix2").value;
+      const message = document.getElementById("message").value;
       const jstNow = new Date(
         Date.now() + (new Date().getTimezoneOffset() + 9 * 60) * 60 * 1000
       );
       this.welcome_list.message_text =
+        "LINE-ID: " +
+        line_id +
+        "<br>" +
         "問い合わせ内容:<br>" +
-        icon_prefix2 +
-        "<br><br>" +
+        message +
         "--選択内容--<br>" +
         "人数: " +
         size_people_select[1] +
@@ -166,7 +168,7 @@ var app = new Vue({
       const email = document.getElementById("email").value;
       const name = document.getElementById("full_name").value;
       const line_id = document.getElementById("line_id").value;
-      const icon_prefix2 = document.getElementById("icon_prefix2").value;
+      const message = document.getElementById("message").value;
 
       const jstNow = new Date(
         Date.now() + (new Date().getTimezoneOffset() + 9 * 60) * 60 * 1000

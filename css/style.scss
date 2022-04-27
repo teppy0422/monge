@@ -872,6 +872,11 @@ form.form_welcome {
   }
 }
 
+.welcome_label {
+  margin-left: 2px !important;
+}
+
+.wel
 /* ラメ星 */
 .back {
   position: relative;
@@ -1045,4 +1050,9 @@ form.form_welcome {
   100% {
     opacity: 0;
   }
+}
+
+#mailing_menu {
+  margin: 0 auto;
+  padding: 1em;
 }

@@ -25,7 +25,8 @@
 
 #### mail
 
-[elasticemail](https://elasticemail.com/)
+[elasticemail](https://elasticemail.com/)-送信ラグひどい
+[staticforms](https://www.staticforms.xyz/)
 
 ##### 参考
 

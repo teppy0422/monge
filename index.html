@@ -825,107 +825,77 @@
         <h3 class="center aos-init" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">ご注文</h3>
         <img src="./img/order_title.png" style="width:100%;">
         <div class="row">
-          <form action="https://api.staticforms.xyz/submit" method="post" id="staticform">
 
+          <form action="https://api.staticforms.xyz/submit" method="post" id="staticform">
             <!-- Replace with your StaticForms accessKey -->
             <input type="hidden" name="accessKey" value="1e24c992-f53f-4835-95db-9b9233e92cc6">
-            <input type="hidden" name="subject" value="Test from jsfiddle">
+            <input type="hidden" name="subject" value="もんげ絵">
             <!-- Replace with the url you want to redirect to -->
-            <input type="hidden" name="redirectTo" value="https://www.google.com">
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/mailing.html">
 
             <div class="row">
-              <div class="input-field col s12 m6">
+              <div class="field col s12 m6">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="full_name" type="text" class="validate">
-                <label for="full_name" class="form_welcome">お名前
+                <label class="label welcome_label">お名前
                   <span class="new badge" data-badge-caption="">必須</span>
                 </label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s12">
-                <i class="material-icons prefix">email</i>
-                <input id="email" type="email" class="validate">
-                <label for="email" class="form_welcome">メールアドレス
-                  <span class="new badge" data-badge-caption="">必須</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="input-field col s6">
-                <i class="material-icons prefix ">phone_iphone</i>
-                <input id="line_id" type="text" class="validate input_text">
-                <label for="line_id" class="form_welcome">LINE ID</label>
-              </div>
-            </div>
-
-            <div class="row">
-              <form class="col s12">
-                <div class="input-field col s12">
-                  <i class="material-icons prefix">mode_edit</i>
-                  <textarea id="icon_prefix2" class="materialize-textarea input_text" data-length="120"></textarea>
-                  <label for="icon_prefix2" class="form_welcome">お問い合わせ内容</label>
+                <div class="control">
+                  <input id="full_name" class="input" type="text" name="name" placeholder="入力してください" required>
                 </div>
-              </form>
+              </div>
             </div>
+
+            <div class="row">
+              <div class="field col s12">
+                <i class="material-icons prefix">email</i>
+                <label class="label welcome_label">Email
+                  <span class="new badge" data-badge-caption="">必須</span>
+                </label>
+                <div class="control">
+                  <input class="input" type="email" name="email" id="email" placeholder="入力してください" required>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="row">
+              <div class="field col s6">
+                <i class="material-icons prefix">phone_iphone</i>
+                <label class="label welcome_label">LINE ID</label>
+                <div class="control">
+                  <input class="input" id="line_id" type="text" name="line_id" placeholder="" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="field col s12">
+                <i class="material-icons prefix">mode_edit</i>
+
+                <label class="label welcome_label">お問合せ</label>
+                <div class="control">
+                  <textarea id="message" class="textarea materialize-textarea" name="message" placeholder=""
+                    required></textarea>
+                </div>
+              </div>
+            </div>
+
             <div class="center">
-              <a class="waves-effect waves-light btn-large" style="color:#fff" @click="send_message();"><i
-                  class="material-icons right" style="margin-left: 0.5em;;">send</i>送信</a><br>
+              <button class="button is-primary waves-effect waves-light btn-large" type="Submit"><i
+                  class="material-icons right" style="margin-left: 0.5em;;">send</i>送信</button>
+              <input type="text" name="$myCustomField1" id="myMessage" value="">
             </div>
+
           </form>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="columns">
-        <div class="column is-half">
-          <form action="https://api.staticforms.xyz/submit" method="post" id="staticform">
-            <!-- Replace with your StaticForms accessKey -->
-            <input type="hidden" name="accessKey" value="1e24c992-f53f-4835-95db-9b9233e92cc6">
-            <input type="hidden" name="subject" value="Test from jsfiddle">
-            <!-- Replace with the url you want to redirect to -->
-            <input type="hidden" name="redirectTo" value="https://www.google.com">
+    <div class="container" id="mailing_menu">
 
-
-            <div class="field">
-              <i class="material-icons prefix">account_circle</i>
-              <label class="label">お名前</label>
-              <div class="control">
-                <input class="input" type="text" name="name" placeholder="入力してください" required>
-              </div>
-            </div>
-
-            <div class="field">
-              <i class="material-icons prefix">email</i>
-              <label class="label">Email</label>
-              <div class="control">
-                <input class="input" type="email" name="email" placeholder="Enter Your Email" required>
-              </div>
-            </div>
-
-            <div class="field">
-              <i class="material-icons prefix">phone_iphone</i>
-              <label class="label">LINE ID</label>
-              <div class="control">
-                <input class="input" type="text" name="line_id" placeholder="Enter Your LINE-id" required>
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="label">Message</label>
-              <div class="control">
-                <textarea class="textarea" name="message" placeholder="Enter Your Message" required></textarea>
-              </div>
-            </div>
-            <button class="button is-primary" type="Submit">Submit</button>
-            <input type="text" name="$myCustomField1" id="myMessage" value="">
-          </form>
-        </div>
-      </div>
     </div>
+
+
   </div>
 
 
@@ -938,8 +908,7 @@
   </div>
 
   <pre style="line-height: 1.5em;">
-          フォーム送信
-          >送信ボタンを押した後のメッセージ追加
+          送信後の画面
           〜の表示
           ご注文の流れの文字位置
           ボタンのアクションの見直し

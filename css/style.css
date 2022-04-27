@@ -1007,7 +1007,11 @@ form.form_welcome .row:last-child {
   border-radius: 0px 0px 10px 10px;
 }
 
-/* ラメ星 */
+.welcome_label {
+  margin-left: 2px !important;
+}
+
+.wel
 .back {
   position: relative;
   vertical-align: middle;
@@ -1255,5 +1259,10 @@ form.form_welcome .row:last-child {
   100% {
     opacity: 0;
   }
+}
+
+#mailing_menu {
+  margin: 0 auto;
+  padding: 1em;
 }
 /*# sourceMappingURL=style.css.map */
