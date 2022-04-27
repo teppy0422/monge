@@ -889,8 +889,8 @@ Result Skip Results iframe EDIT ON .light-theme #btnMode {
 }
 
 .btnModeFake {
-  -webkit-animation: btnModeClick 0.5s linear;
-          animation: btnModeClick 0.5s linear;
+  -webkit-animation: btnModeClick 0.6s linear;
+          animation: btnModeClick 0.6s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }

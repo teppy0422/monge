@@ -47,6 +47,7 @@ var app = new Vue({
         over: false,
       },
       total_cost: 0,
+      message_text: "",
     },
   },
   methods: {
@@ -108,6 +109,7 @@ var app = new Vue({
           this.welcome_list.illustrator.cost = cost;
           break;
       }
+      // 金額の更新
       this.welcome_list.total_cost =
         this.welcome_list.size_people.cost +
         this.welcome_list.accessories.cost +
@@ -115,24 +117,17 @@ var app = new Vue({
         this.welcome_list.picture_frame.cost +
         this.welcome_list.rame_add.cost;
       toast_create(this.welcome_list.total_cost);
-    },
-    send_message: function() {
-      console.log("send_mail");
+      // 選択の更新
+      var myMessage = document.getElementById("myMessage");
       var size_people_select = this.welcome_list.size_people.select.split("_");
       const email = document.getElementById("email").value;
       const name = document.getElementById("full_name").value;
       const line_id = document.getElementById("line_id").value;
       const icon_prefix2 = document.getElementById("icon_prefix2").value;
-      const text =
-        "依頼者：" +
-        name +
-        " 様<br>" +
-        "メールアドレス: " +
-        email +
-        "<br>" +
-        "LINE ID: " +
-        line_id +
-        "<br>" +
+      const jstNow = new Date(
+        Date.now() + (new Date().getTimezoneOffset() + 9 * 60) * 60 * 1000
+      );
+      this.welcome_list.message_text =
         "問い合わせ内容:<br>" +
         icon_prefix2 +
         "<br><br>" +
@@ -159,7 +154,24 @@ var app = new Vue({
         this.welcome_list.illustrator.select +
         "<br>" +
         "総額: " +
-        this.welcome_list.total_cost;
+        this.welcome_list.total_cost +
+        "<br><br>" +
+        "自国: " +
+        jstNow;
+      myMessage.value = this.welcome_list.message_text;
+    },
+    send_message: function() {
+      console.log("send_mail");
+      var size_people_select = this.welcome_list.size_people.select.split("_");
+      const email = document.getElementById("email").value;
+      const name = document.getElementById("full_name").value;
+      const line_id = document.getElementById("line_id").value;
+      const icon_prefix2 = document.getElementById("icon_prefix2").value;
+
+      const jstNow = new Date(
+        Date.now() + (new Date().getTimezoneOffset() + 9 * 60) * 60 * 1000
+      );
+      // const jstHour = jstNow.getHours(); console.log(jstHour);
       sendDoc(email, text);
     },
   },
